@@ -1,103 +1,200 @@
-import Image from "next/image";
+import Link from "next/link";
+import { DataScienceAnimation } from "@/components/data-animation";
+import {
+  awards,
+  coaching,
+  contactLinks,
+  experiences,
+  globalPrograms,
+  organizations,
+  summary,
+  certifications,
+} from "@/data/resume";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <main className="mx-auto max-w-5xl px-6 pb-28">
+      <div className="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,_rgba(37,99,235,0.15),_transparent_60%)]" />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <section id="home" className="grid gap-12 pt-24 md:grid-cols-[1.7fr_1fr] md:items-center">
+        <div className="space-y-6">
+          <p className="text-sm uppercase tracking-[0.3em] text-blue-400">Data Scientist & AI Enthusiast</p>
+          <h1 className="text-4xl font-semibold leading-tight text-glow md:text-5xl">
+            Jiryan Farokhi
+          </h1>
+          <p className="text-lg text-slate-300">{summary}</p>
+          <div className="flex flex-wrap gap-3">
+            <Link
+              href="https://www.datascienceportfol.io/jiryan_farokhi"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-full bg-blue-500 px-5 py-2 text-sm font-medium text-slate-50 transition hover:bg-blue-400 hover:shadow-lg"
+            >
+              View Projects
+            </Link>
+            <Link
+              href="mailto:500221102@mhs.its.ac.id"
+              className="rounded-full border border-slate-700 px-5 py-2 text-sm font-medium text-slate-300 transition hover:border-blue-400 hover:text-blue-300"
+            >
+              Get in Touch
+            </Link>
+          </div>
+          <div className="flex flex-wrap gap-3">
+            {contactLinks.map((item) => (
+              <Link
+                key={item.label}
+                href={item.href}
+                target={item.href.startsWith("http") ? "_blank" : undefined}
+                rel={item.href.startsWith("http") ? "noreferrer" : undefined}
+                className="rounded-full border border-slate-800 px-3 py-1 text-xs uppercase tracking-wide text-slate-400 transition hover:border-blue-500 hover:text-blue-400"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <DataScienceAnimation />
+      </section>
+
+      <section className="mt-24 space-y-12" aria-labelledby="experience-title">
+        <div className="flex flex-col gap-2">
+          <p className="text-sm uppercase tracking-[0.3em] text-blue-400">Experience</p>
+          <h2 id="experience-title" className="text-2xl font-semibold text-slate-50">
+            Professional Journey
+          </h2>
+          <p className="max-w-3xl text-slate-300">
+            Combining research, analytics, and leadership to deliver reliable data science solutions across startups,
+            consulting, and academic environments.
+          </p>
+        </div>
+        <div className="space-y-10">
+          {experiences.map((experience) => (
+            <article
+              key={`${experience.company}-${experience.role}`}
+              className="rounded-3xl border border-slate-800 bg-slate-900/40 p-6 shadow-lg shadow-slate-950/50"
+            >
+              <div className="flex flex-col gap-2 md:flex-row md:items-baseline md:justify-between">
+                <div>
+                  <h3 className="text-xl font-semibold text-slate-50">
+                    {experience.role}
+                  </h3>
+                  <p className="text-sm text-blue-300">{experience.company}</p>
+                </div>
+                <p className="text-sm text-slate-400 md:text-right">
+                  {experience.location}
+                  <br />
+                  {experience.period}
+                </p>
+              </div>
+              <ul className="mt-4 space-y-3 text-sm text-slate-300">
+                {experience.bullets.map((bullet) => (
+                  <li key={bullet} className="flex gap-3">
+                    <span className="mt-1 inline-block h-1.5 w-1.5 flex-none rounded-full bg-blue-400" />
+                    <span>{bullet}</span>
+                  </li>
+                ))}
+              </ul>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="mt-24 grid gap-12 lg:grid-cols-2" aria-labelledby="organizations-title">
+        <div>
+          <p className="text-sm uppercase tracking-[0.3em] text-blue-400">Leadership</p>
+          <h2 id="organizations-title" className="text-2xl font-semibold text-slate-50">
+            Communities & Organisations
+          </h2>
+          <div className="mt-8 space-y-10">
+            {organizations.map((org) => (
+              <article key={org.name} className="rounded-3xl border border-slate-800 bg-slate-900/40 p-6">
+                <h3 className="text-lg font-semibold text-slate-50">{org.name}</h3>
+                <p className="text-sm text-blue-300">{org.role}</p>
+                <p className="text-xs uppercase tracking-wider text-slate-400">{org.period}</p>
+                <ul className="mt-4 space-y-3 text-sm text-slate-300">
+                  {org.bullets.map((bullet) => (
+                    <li key={bullet} className="flex gap-3">
+                      <span className="mt-1 inline-block h-1.5 w-1.5 flex-none rounded-full bg-blue-400" />
+                      <span>{bullet}</span>
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </div>
+        <div className="space-y-10">
+          <article className="rounded-3xl border border-slate-800 bg-slate-900/40 p-6">
+            <h3 className="text-lg font-semibold text-slate-50">International Exposure</h3>
+            <div className="mt-4 space-y-6">
+              {globalPrograms.map((program) => (
+                <div key={program.title} className="rounded-2xl border border-slate-800/60 bg-slate-950/60 p-4">
+                  <p className="text-sm font-semibold text-blue-300">{program.title}</p>
+                  <p className="text-xs uppercase tracking-wider text-slate-400">
+                    {program.role} - {program.location} - {program.period}
+                  </p>
+                  <ul className="mt-3 space-y-2 text-sm text-slate-300">
+                    {program.highlights.map((highlight) => (
+                      <li key={highlight} className="flex gap-2">
+                        <span className="mt-1 inline-block h-1.5 w-1.5 flex-none rounded-full bg-blue-500" />
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </article>
+
+          <article className="rounded-3xl border border-slate-800 bg-slate-900/40 p-6">
+            <h3 className="text-lg font-semibold text-slate-50">Awards & Highlights</h3>
+            <ul className="mt-4 space-y-3 text-sm text-slate-300">
+              {awards.map((award) => (
+                <li key={award} className="flex gap-3">
+                  <span className="mt-1 inline-block h-1.5 w-1.5 flex-none rounded-full bg-blue-400" />
+                  <span>{award}</span>
+                </li>
+              ))}
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section className="mt-24 grid gap-10 lg:grid-cols-2" aria-labelledby="growth-title">
+        <div className="rounded-3xl border border-slate-800 bg-slate-900/40 p-6">
+          <h2 id="growth-title" className="text-xl font-semibold text-slate-50">Certifications</h2>
+          <ul className="mt-4 space-y-3 text-sm text-slate-300">
+            {certifications.map((cert) => (
+              <li key={cert.name} className="flex justify-between gap-4">
+                <div>
+                  <p>{cert.name}</p>
+                  <p className="text-xs uppercase tracking-wider text-slate-400">{cert.issuer}</p>
+                </div>
+                <p className="text-xs text-blue-300">{cert.period}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="rounded-3xl border border-slate-800 bg-slate-900/40 p-6">
+          <h2 className="text-xl font-semibold text-slate-50">Coaching & Mentoring</h2>
+          <ul className="mt-4 space-y-3 text-sm text-slate-300">
+            {coaching.map((item) => (
+              <li key={item} className="flex gap-3">
+                <span className="mt-1 inline-block h-1.5 w-1.5 flex-none rounded-full bg-blue-400" />
+                <span>{item}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      <footer className="mt-24 border-t border-slate-800 pt-8 text-sm text-slate-500">
+        <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+          <p>(c) {new Date().getFullYear()} Jiryan Farokhi. All rights reserved.</p>
+          <p className="text-xs">Built with Next.js and Tailwind CSS.</p>
+        </div>
       </footer>
-    </div>
+    </main>
   );
 }
+

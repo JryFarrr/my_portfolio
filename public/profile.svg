@@ -1,0 +1,8 @@
+<svg width="800" height="1000" viewBox="0 0 800 1000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="800" height="1000" rx="80" fill="#0F172A"/>
+  <circle cx="400" cy="360" r="180" fill="#1E3A8A"/>
+  <circle cx="400" cy="340" r="148" fill="#2563EB"/>
+  <circle cx="400" cy="320" r="118" fill="#3B82F6"/>
+  <path d="M400 540C284 540 180 630 160 773C154 815 186 852 228 852H572C614 852 646 815 640 773C620 630 516 540 400 540Z" fill="#1E293B"/>
+  <text x="50%" y="360" text-anchor="middle" fill="#F8FAFC" font-size="120" font-family="'Segoe UI', sans-serif" font-weight="700">JF</text>
+</svg>
