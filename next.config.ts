@@ -1,9 +1,9 @@
-import type { NextConfig } from "next";
-
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
+  output: 'export',
+  basePath: '/my_portfolio',  // sesuaikan dengan nama repo
   images: {
-    unoptimized: true,
+    unoptimized: true,        // supaya export jalan lancar di GitHub Pages
   },
 };
 
