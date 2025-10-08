@@ -1,46 +1,39 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
   color-scheme: dark;
 }
 
-@theme inline {
-  --font-sans: var(--font-poppins);
-  --font-mono: var(--font-geist-mono);
+html {
+  scroll-behavior: smooth;
 }
 
-@layer base {
-  html {
-    @apply scroll-smooth;
-  }
-
-  body {
-    @apply bg-slate-950 text-slate-100 font-sans;
-  }
+body {
+  @apply bg-slate-950 text-slate-100 font-sans;
 }
 
-@layer utilities {
-  .text-glow {
-    text-shadow: 0 0 18px rgba(37, 99, 235, 0.45);
-  }
+.text-glow {
+  text-shadow: 0 0 18px rgba(37, 99, 235, 0.45);
+}
 
-  .data-visual-orbit {
-    animation: orbit-slow 18s linear infinite;
-  }
+.data-visual-orbit {
+  animation: orbit-slow 18s linear infinite;
+}
 
-  .data-visual-orbit-slower {
-    animation: orbit-slower 30s linear infinite reverse;
-  }
+.data-visual-orbit-slower {
+  animation: orbit-slower 30s linear infinite reverse;
+}
 
-  .data-visual-bar {
-    animation: data-bar 6s ease-in-out infinite;
-    background-size: 200% 100%;
-  }
+.data-visual-bar {
+  animation: data-bar 6s ease-in-out infinite;
+  background-size: 200% 100%;
+}
 
-  .data-visual-particle {
-    animation: particle-float 6s ease-in-out infinite;
-    box-shadow: 0 0 18px rgba(37, 99, 235, 0.4);
-  }
+.data-visual-particle {
+  animation: particle-float 6s ease-in-out infinite;
+  box-shadow: 0 0 18px rgba(37, 99, 235, 0.4);
 }
 
 @keyframes orbit-slow {
