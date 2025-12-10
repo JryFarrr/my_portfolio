@@ -9,13 +9,13 @@ export function HeroButtons() {
 
   return (
     <>
-      <div className="flex flex-wrap items-center gap-4">
+      <div className="flex flex-col items-center gap-3 sm:flex-row sm:flex-wrap sm:gap-4">
         {/* Download Resume Button */}
         <a
           href="/cv/CV_Jiryan Farokhi.pdf"
           download="CV_Jiryan Farokhi.pdf"
           type="application/pdf"
-          className="group flex items-center gap-2 rounded-full border border-blue-500 bg-transparent px-6 py-3 font-mono text-sm font-medium uppercase tracking-wider text-blue-400 transition-all hover:bg-blue-500 hover:text-slate-950"
+          className="group flex items-center justify-center gap-2 rounded-full border border-blue-500 bg-transparent px-8 py-3 font-mono text-sm font-medium uppercase tracking-wider text-blue-400 transition-all hover:bg-blue-500 hover:text-slate-950"
         >
           Download CV
           <svg
@@ -33,10 +33,10 @@ export function HeroButtons() {
           </svg>
         </a>
 
-        {/* Get in Touch Button */}
+        {/* Get in Touch Button - Hidden on mobile */}
         <button
           onClick={() => setIsContactOpen(true)}
-          className="group flex items-center gap-2 rounded-full border border-slate-600 bg-transparent px-6 py-3 font-mono text-sm font-medium uppercase tracking-wider text-slate-300 transition-all hover:border-blue-400 hover:text-blue-400"
+          className="group hidden items-center gap-2 rounded-full border border-slate-600 bg-transparent px-6 py-3 font-mono text-sm font-medium uppercase tracking-wider text-slate-300 transition-all hover:border-blue-400 hover:text-blue-400 sm:flex"
         >
           Get in Touch
           <svg
@@ -54,8 +54,10 @@ export function HeroButtons() {
           </svg>
         </button>
 
-        {/* Social Links */}
-        <SocialLinks />
+        {/* Social Links - Hidden on mobile */}
+        <div className="hidden sm:block">
+          <SocialLinks />
+        </div>
       </div>
 
       {/* Contact Modal */}

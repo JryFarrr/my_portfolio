@@ -62,7 +62,7 @@ function AnimatedNumber({ value, duration = 2000 }: { value: number; duration?: 
   return (
     <span
       ref={ref}
-      className="font-mono text-4xl font-bold text-blue-400 transition-all md:text-5xl lg:text-6xl"
+      className="font-mono text-2xl font-bold text-blue-400 transition-all sm:text-3xl md:text-4xl lg:text-5xl"
     >
       {count}
       <span className="text-blue-400">+</span>
@@ -72,15 +72,15 @@ function AnimatedNumber({ value, duration = 2000 }: { value: number; duration?: 
 
 export function StatsCounter() {
   return (
-    <div className="flex flex-wrap items-center justify-center gap-8 md:justify-between md:gap-4">
+    <div className="grid grid-cols-2 gap-4 sm:flex sm:flex-wrap sm:items-center sm:justify-center sm:gap-6 md:justify-between md:gap-4">
       {stats.map((stat, index) => (
         <div
           key={index}
-          className="flex items-center gap-3 transition-transform hover:scale-105"
+          className="flex items-center justify-center gap-2 sm:gap-3 transition-transform hover:scale-105"
           style={{ animationDelay: `${index * 150}ms` }}
         >
           <AnimatedNumber value={stat.value} duration={2000 + index * 200} />
-          <span className="whitespace-pre-line text-sm text-slate-400 md:text-base">
+          <span className="whitespace-pre-line text-xs text-slate-400 sm:text-sm md:text-base">
             {stat.label}
           </span>
         </div>

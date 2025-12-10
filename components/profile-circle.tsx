@@ -4,10 +4,10 @@ import Image from "next/image";
 
 export function ProfileCircle({ imageSrc }: { imageSrc: string }) {
   return (
-    <div className="relative flex items-center justify-center -mt-16 lg:-mt-24">
+    <div className="relative flex items-center justify-center">
       {/* Animated rotating circle border */}
       <svg
-        className="absolute h-[320px] w-[320px] animate-spin-slow md:h-[380px] md:w-[380px]"
+        className="absolute h-[250px] w-[250px] animate-spin-slow sm:h-[300px] sm:w-[300px] md:h-[350px] md:w-[350px] lg:h-[380px] lg:w-[380px]"
         viewBox="0 0 400 400"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ export function ProfileCircle({ imageSrc }: { imageSrc: string }) {
 
       {/* Second rotating circle (opposite direction) */}
       <svg
-        className="absolute h-[280px] w-[280px] animate-spin-slow-reverse md:h-[330px] md:w-[330px]"
+        className="absolute h-[220px] w-[220px] animate-spin-slow-reverse sm:h-[260px] sm:w-[260px] md:h-[300px] md:w-[300px] lg:h-[330px] lg:w-[330px]"
         viewBox="0 0 350 350"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@ export function ProfileCircle({ imageSrc }: { imageSrc: string }) {
       </svg>
 
       {/* Profile image container */}
-      <div className="relative h-[230px] w-[230px] overflow-hidden rounded-full border-4 border-blue-500/30 bg-slate-900 md:h-[280px] md:w-[280px]">
+      <div className="relative h-[180px] w-[180px] overflow-hidden rounded-full border-4 border-blue-500/30 bg-slate-900 sm:h-[210px] sm:w-[210px] md:h-[250px] md:w-[250px] lg:h-[280px] lg:w-[280px]">
         <Image
           src={imageSrc}
           alt="Profile"
