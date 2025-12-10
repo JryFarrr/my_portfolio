@@ -1,4 +1,4 @@
-export const summary = `Undergraduate Mathematics student at Institut Teknologi Sepuluh Nopember with a deep interest in machine learning, big data, and AI. Known for taking initiative, thriving in collaborative teams, and delivering well-crafted analytical solutions.`;
+export const summary = `Motivated and Fast-learner Mathematics (Computer Science) student at Institut Teknologi Sepuluh Nopember with a strong foundation as a AI and Data Science across end-to-end machine learning lifecycles from data exploration to model deployment. Known for strong communication, adaptability, and problem-solving skills, backed by technical depth and a continuous drive to learn emerging technologies.`;
 
 export const contactLinks = [
   {
