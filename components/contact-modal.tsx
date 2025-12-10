@@ -74,7 +74,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
             Get in Touch
           </h2>
           <p className="mt-1 text-sm text-slate-400">
-            Send me a message and I'll get back to you soon.
+            Send me a message and I&apos;ll get back to you soon.
           </p>
           <p className="mt-2 text-xs text-blue-400">
             Your message will be sent directly to jiryanfarokhi@gmail.com
