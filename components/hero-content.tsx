@@ -11,7 +11,7 @@ export function HeroContent({ summary }: { summary: string }) {
         <TypingRole roles={roles} typingSpeed={80} deletingSpeed={40} pauseDuration={2500} />
       </p>
       <h1 className="font-mono text-4xl leading-tight md:text-5xl lg:text-6xl">
-        <span className="text-slate-100">Hello I'm</span>
+        <span className="text-slate-100">Hello I&apos;m</span>
         <br />
         <span className="text-blue-400">
           <TypingName name="Jiryan Farokhi" />

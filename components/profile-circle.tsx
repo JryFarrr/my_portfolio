@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 export function ProfileCircle({ imageSrc }: { imageSrc: string }) {
   return (
     <div className="relative flex items-center justify-center -mt-16 lg:-mt-24">
@@ -51,10 +53,12 @@ export function ProfileCircle({ imageSrc }: { imageSrc: string }) {
 
       {/* Profile image container */}
       <div className="relative h-[230px] w-[230px] overflow-hidden rounded-full border-4 border-blue-500/30 bg-slate-900 md:h-[280px] md:w-[280px]">
-        <img
+        <Image
           src={imageSrc}
           alt="Profile"
-          className="h-full w-full object-cover"
+          fill
+          className="object-cover"
+          priority
         />
       </div>
     </div>
