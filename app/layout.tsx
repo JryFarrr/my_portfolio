@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Jiryan Farokhi | Data Scientist Resume",
+  title: "Jiryan Farokhi | Portfolio",
   description:
     "Digital resume for Jiryan Farokhi, showcasing data science projects, academic background, and leadership experience.",
 };

@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { Calendar, MapPin, Briefcase, ExternalLink } from "lucide-react";
+import { Calendar, MapPin, Briefcase } from "lucide-react";
 import { experiences } from "@/data/resume";
 
 // Stats data for experience section

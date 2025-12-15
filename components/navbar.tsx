@@ -28,8 +28,6 @@ export function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
-                target={item.external ? "_blank" : undefined}
-                rel={item.external ? "noreferrer" : undefined}
                 className="text-slate-300 transition hover:text-blue-400"
               >
                 {item.label}
@@ -70,8 +68,6 @@ export function Navbar() {
               <Link
                 key={item.label}
                 href={item.href}
-                target={item.external ? "_blank" : undefined}
-                rel={item.external ? "noreferrer" : undefined}
                 onClick={() => setIsMenuOpen(false)}
                 className="rounded-lg px-3 py-2 text-sm text-slate-300 transition hover:bg-slate-800 hover:text-blue-400"
               >
