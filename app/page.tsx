@@ -1,7 +1,9 @@
 import { ProfileCircle } from "@/components/profile-circle";
-import { StatsCounter } from "@/components/stats-counter";
 import { HeroContent } from "@/components/hero-content";
 import { HeroButtons } from "@/components/hero-buttons";
+import { ExperienceSection } from "@/components/experience-section";
+import { ProjectsSection } from "@/components/projects-section";
+import { AcademicsSection } from "@/components/academics-section";
 import { summary, portraitImagePath } from "@/data/resume";
 
 export default function Home() {
@@ -28,12 +30,16 @@ export default function Home() {
             </div>
           </div>
         </div>
-
-        {/* Stats Section - Hidden on mobile, visible on desktop */}
-        <div className="hidden border-t border-slate-800/50 py-6 md:block">
-          <StatsCounter />
-        </div>
       </section>
+
+      {/* Professional Experience Section */}
+      <ExperienceSection />
+
+      {/* Projects Section */}
+      <ProjectsSection />
+
+      {/* Academics Section */}
+      <AcademicsSection />
     </main>
   );
 }

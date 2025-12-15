@@ -28,7 +28,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${poppins.variable} ${geistMono.variable} bg-slate-950 text-slate-100 antialiased`}
+        className={`${poppins.variable} ${geistMono.variable} font-sans bg-slate-950 text-slate-100 antialiased`}
+        style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
       >
         <div className="min-h-screen">
           <Navbar />

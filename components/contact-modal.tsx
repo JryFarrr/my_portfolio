@@ -70,7 +70,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
         {/* Header */}
         <div className="mb-6">
-          <h2 className="font-mono text-2xl font-bold text-slate-100">
+          <h2 className="text-2xl font-bold text-slate-100">
             Get in Touch
           </h2>
           <p className="mt-1 text-sm text-slate-400">
@@ -167,14 +167,14 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 rounded-lg border border-slate-700 px-4 py-2 font-mono text-sm text-slate-300 transition hover:border-slate-600 hover:bg-slate-800"
+              className="flex-1 rounded-lg border border-slate-700 px-4 py-2 text-sm text-slate-300 transition hover:border-slate-600 hover:bg-slate-800"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={isSubmitting}
-              className="flex-1 rounded-lg bg-blue-500 px-4 py-2 font-mono text-sm font-medium text-slate-950 transition hover:bg-blue-400 disabled:opacity-50"
+              className="flex-1 rounded-lg bg-blue-500 px-4 py-2 text-sm font-medium text-slate-950 transition hover:bg-blue-400 disabled:opacity-50"
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>

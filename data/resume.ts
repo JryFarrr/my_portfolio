@@ -43,11 +43,12 @@ export const experiences = [
     company: "Avalon AI",
     role: "Data Scientist Lead",
     location: "Surabaya, Indonesia",
-    period: "February 2024 - Present",
+    period: "February 2024 - November 2025",
     bullets: [
-      "Lead research initiatives spanning NLP, computer vision, and virtual try-on (VTON) experiments.",
-      "Mentor members to compete in national data science competitions and deliver polished submissions.",
-      "Spearhead a smart Google Maps analytics project integrating OpenAI, Search API, and Google Maps data pipelines.",
+      "Designed and built scalable RESTful APIs to facilitate seamless data communication between client and server, ensuring low latency and high reliability.",
+      "Built integrations between Google Maps Platform, Search API, and OpenAI API to enrich raw location data into intelligent analytical insights.",
+      "Developed robust backend logic to perform automated and efficient scraping and processing of geospatial data.",
+      "Compiled comprehensive and standardized API documentation (using Swagger/OpenAPI) to streamline collaboration with frontend teams and external startup partners.",
     ],
   },
   {
@@ -56,9 +57,11 @@ export const experiences = [
     location: "Bandung, Indonesia",
     period: "January - February 2025",
     bullets: [
-      "Consolidated nationwide datasets across 34 provinces and 514 cities from BUMN and multinational partners.",
-      "Connected insights to supply-chain systems and built one-year cost forecasting models with time series analysis.",
-      "Collaborated closely with data and software engineers from leading Indonesian universities.",
+      "Analyzed supply and demand datasets covering 34 provinces and 514 cities/regencies across Indonesia, sourced from BUMN company(e.g., Pertamina Patra Niaga) and international enterprises.",
+      "Developed 12-month time-series forecasting models using Tree-based Machine Learning algorithms (e.g., Random Forest, XGBoost) to predict supply and demand with high accuracy.",
+      "Designed interactive dashboards to visualize correlation analysis and delivered strategic recommendations to stakeholders.",
+      "Worked in a dynamic cross-functional team with Data Engineers and Software Engineers to streamline data pipelines and model deployment.",
+
     ],
   },
   {
@@ -79,16 +82,6 @@ export const experiences = [
     bullets: [
       "Guided 30+ students through foundational programming and algorithm concepts.",
       "Author learning modules, presentations, and practice quizzes for hands-on labs.",
-    ],
-  },
-  {
-    company: "Dicoding x Lintasarta Cloudeka Digischool",
-    role: "Machine Learning Student",
-    location: "Jakarta, Indonesia",
-    period: "January - June 2024",
-    bullets: [
-      "Selected as 1 of 150 participants from 3,000+ registrants in the national scholarship.",
-      "Delivered seven end-to-end ML projects covering NLP, time series, CNNs, and Dockerized deployment.",
     ],
   },
 ] as const;
@@ -140,12 +133,11 @@ export const globalPrograms = [
 ] as const;
 
 export const awards = [
-  "National PKM-KC (Program Kreativitas Mahasiswa Bidang Karya Cipta) 2023 - Kemendikbud",
+  "Juara Harapan II Big Data Challenge Satria Data  ITS 2025 – Kemenristekdikti",
+  "Top 20 Pertamuda Early Stage Startup Competition 2025",
+  "PKM-KC (Program Kreativitas Mahasiswa Bidang Karya Cipta) 2023 – Funded by Kemenristekdikti",
   "Top 5 GAMMAFEST Data Science Competition 2024 - Himpunan Mahasiswa Statistika IPB",
-  "Rumah Kepemimpinan Awardee - Rumah Kepemimpinan Foundation Jakarta",
-  "Delegation of ITS in Satria Data 2024 - Puspresnas",
-  "Top 3 GPBL Data Science Project in Japan - Department of Mathematics ITS & SIT Japan",
-  "Top 1000 Indonesian NEXT 2023 - Telkomsel",
+  "Top 3 GPBL Data Science Project in Japan - Department of Mathematics ITS & SIT Japan"
 ] as const;
 
 export const coaching = [

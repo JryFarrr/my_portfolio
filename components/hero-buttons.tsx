@@ -15,7 +15,7 @@ export function HeroButtons() {
           href="/cv/CV_Jiryan Farokhi.pdf"
           download="CV_Jiryan Farokhi.pdf"
           type="application/pdf"
-          className="group flex items-center justify-center gap-2 rounded-full border border-blue-500 bg-transparent px-8 py-3 font-mono text-sm font-medium uppercase tracking-wider text-blue-400 transition-all hover:bg-blue-500 hover:text-slate-950"
+          className="group flex items-center justify-center gap-2 rounded-full border border-blue-500 bg-transparent px-8 py-3 text-sm font-medium uppercase tracking-wider text-blue-400 transition-all hover:bg-blue-500 hover:text-slate-950"
         >
           Download CV
           <svg
@@ -36,7 +36,7 @@ export function HeroButtons() {
         {/* Get in Touch Button - Hidden on mobile */}
         <button
           onClick={() => setIsContactOpen(true)}
-          className="group hidden items-center gap-2 rounded-full border border-slate-600 bg-transparent px-6 py-3 font-mono text-sm font-medium uppercase tracking-wider text-slate-300 transition-all hover:border-blue-400 hover:text-blue-400 sm:flex"
+          className="group hidden items-center gap-2 rounded-full border border-slate-600 bg-transparent px-6 py-3 text-sm font-medium uppercase tracking-wider text-slate-300 transition-all hover:border-blue-400 hover:text-blue-400 sm:flex"
         >
           Get in Touch
           <svg

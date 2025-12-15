@@ -62,7 +62,7 @@ function AnimatedNumber({ value, duration = 2000 }: { value: number; duration?: 
   return (
     <span
       ref={ref}
-      className="font-mono text-2xl font-bold text-blue-400 transition-all sm:text-3xl md:text-4xl lg:text-5xl"
+      className="text-2xl font-bold text-blue-400 transition-all sm:text-3xl md:text-4xl lg:text-5xl"
     >
       {count}
       <span className="text-blue-400">+</span>

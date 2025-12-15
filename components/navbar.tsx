@@ -5,11 +5,9 @@ import { useState } from "react";
 
 const navItems = [
   { label: "Home", href: "/" },
-  {
-    label: "Project",
-    href: "https://www.datascienceportfol.io/jiryan_farokhi",
-    external: true,
-  },
+  { label: "Experience", href: "/#experience" },
+  { label: "Projects", href: "/#projects" },
+  { label: "Education", href: "/#education" },
   { label: "About Me", href: "/about" },
 ];
 
@@ -19,13 +17,13 @@ export function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b border-slate-800/60 bg-slate-950/80 backdrop-blur-md">
       <nav className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 md:px-6 md:py-4">
-        <Link href="/" className="font-mono text-xl font-bold text-slate-100 md:text-2xl">
-          Jiryan<span className="text-blue-400">.</span>
+        <Link href="/" className="text-xl font-bold text-slate-100 md:text-2xl">
+          Portfolio<span className="text-blue-400">.</span>
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden items-center gap-6 md:flex lg:gap-8">
-          <div className="flex items-center gap-5 font-mono text-sm tracking-wider lg:gap-7">
+          <div className="flex items-center gap-5 text-sm tracking-wider lg:gap-7">
             {navItems.map((item) => (
               <Link
                 key={item.label}
@@ -40,7 +38,7 @@ export function Navbar() {
           </div>
           <Link
             href="mailto:jiryanfarokhi@gmail.com"
-            className="rounded-full bg-blue-500 px-4 py-2 font-mono text-sm font-medium text-slate-950 transition hover:bg-blue-400"
+            className="rounded-full bg-blue-500 px-4 py-2 text-sm font-medium text-slate-950 transition hover:bg-blue-400"
           >
             Hire me
           </Link>
@@ -75,7 +73,7 @@ export function Navbar() {
                 target={item.external ? "_blank" : undefined}
                 rel={item.external ? "noreferrer" : undefined}
                 onClick={() => setIsMenuOpen(false)}
-                className="rounded-lg px-3 py-2 font-mono text-sm text-slate-300 transition hover:bg-slate-800 hover:text-blue-400"
+                className="rounded-lg px-3 py-2 text-sm text-slate-300 transition hover:bg-slate-800 hover:text-blue-400"
               >
                 {item.label}
               </Link>
@@ -83,7 +81,7 @@ export function Navbar() {
             <Link
               href="mailto:jiryanfarokhi@gmail.com"
               onClick={() => setIsMenuOpen(false)}
-              className="mt-2 rounded-full bg-blue-500 px-4 py-2 text-center font-mono text-sm font-medium text-slate-950 transition hover:bg-blue-400"
+              className="mt-2 rounded-full bg-blue-500 px-4 py-2 text-center text-sm font-medium text-slate-950 transition hover:bg-blue-400"
             >
               Hire me
             </Link>
