@@ -11,7 +11,7 @@ export const contactLinks = [
   },
   {
     label: "GitHub",
-    href: "https://github.com/JryFarr",
+    href: "https://github.com/JryFarrr",
   },
   {
     label: "Portfolio",
