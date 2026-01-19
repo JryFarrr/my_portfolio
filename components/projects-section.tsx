@@ -93,7 +93,7 @@ const deployedProjects: typeof notebookProjects = [
     tags: ["NLP", "LLM", "Sentiment Analyst", "Recommendation System", "LDA", "RAG"],
     github: "https://github.com/JryFarrr/datmin_gemastik",
     image: "/images/projects/gemastik.jpg",
-  }
+  },
   {
     title: "Intelligent Grading System",
     description: "End-to-end Automated Grading System using Machine Learning to automatically grade essay exams integrated with an exam web application.",
