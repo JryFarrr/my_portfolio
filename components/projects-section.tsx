@@ -92,7 +92,7 @@ const deployedProjects: typeof notebookProjects = [
     description: "This project offer a tool for automatically and systematically evaluating local news, YouTube news comments, and government policies.",
     tags: ["NLP", "LLM", "Sentiment Analyst", "Recommendation System", "LDA", "RAG"],
     github: "https://github.com/JryFarrr/datmin_gemastik",
-    image: "/images/projects/gemastik.jpg",
+    image: "/images/projects/gemastik.jpeg",
   },
   {
     title: "Intelligent Grading System",
