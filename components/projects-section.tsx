@@ -88,6 +88,13 @@ const deployedProjects: typeof notebookProjects = [
     image: "/images/projects/cgd.png",
   },
   {
+    title: "Digital Narrative Analysis with LDA and LLM for Government Health Policy Evaluation",
+    description: "This project offer a tool for automatically and systematically evaluating local news, YouTube news comments, and government policies.",
+    tags: ["NLP", "LLM", "Sentiment Analyst", "Recommendation System", "LDA", "RAG"],
+    github: "https://github.com/JryFarrr/datmin_gemastik",
+    image: "/images/projects/gemastik.jpg",
+  }
+  {
     title: "Intelligent Grading System",
     description: "End-to-end Automated Grading System using Machine Learning to automatically grade essay exams integrated with an exam web application.",
     tags: ["NLP", "Machine Learning", "Backend", "Frontend"],
