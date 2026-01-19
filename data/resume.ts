@@ -52,7 +52,7 @@ export const experiences = [
     ],
   },
   {
-    company: "PT. AI Divusi (IT Consultant under ITB)",
+    company: "PT Divusi (IT Consultant under ITB)",
     role: "Data Scientist",
     location: "Bandung, Indonesia",
     period: "January - February 2025",
@@ -137,7 +137,8 @@ export const awards = [
   "Top 20 Pertamuda Early Stage Startup Competition 2025",
   "PKM-KC (Program Kreativitas Mahasiswa Bidang Karya Cipta) 2023 – Funded by Kemenristekdikti",
   "Top 5 GAMMAFEST Data Science Competition 2024 - Himpunan Mahasiswa Statistika IPB",
-  "Top 3 GPBL Data Science Project in Japan - Department of Mathematics ITS & SIT Japan"
+  "Top 3 GPBL Data Science Project in Japan - Department of Mathematics ITS & SIT Japan",
+  "Startup Funding Recipient from Institut Teknologi Sepuluh Nopember 2025 - ADB Heti Program",
 ] as const;
 
 export const coaching = [
