@@ -106,7 +106,7 @@ const Footer = () => {
                                     href="mailto:500221102@mhs.its.ac.id"
                                     className="hover:text-blue-400 transition-colors"
                                 >
-                                    500221102@student.its.ac.id
+                                    jiryanfarokhi@gmail.com
                                 </a>
                             </p>
                         </div>

@@ -1,14 +1,15 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { 
-  GraduationCap, 
-  Calendar, 
-  MapPin, 
-  Trophy, 
-  Users, 
+import {
+  GraduationCap,
+  Calendar,
+  MapPin,
+  Trophy,
+  Users,
   Globe,
-  BadgeCheck
+  BadgeCheck,
+  ExternalLink
 } from "lucide-react";
 import { organizations, globalPrograms, awards, certifications } from "@/data/resume";
 
@@ -53,9 +54,8 @@ function AnimatedCard({
   return (
     <div
       ref={ref}
-      className={`transform transition-all duration-700 ease-out ${
-        isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-      } ${className}`}
+      className={`transform transition-all duration-700 ease-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+        } ${className}`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       {children}
@@ -161,9 +161,8 @@ function AwardBadge({ award, index }: { award: string; index: number }) {
   return (
     <div
       ref={ref}
-      className={`transform transition-all duration-500 ease-out ${
-        isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
-      }`}
+      className={`transform transition-all duration-500 ease-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
+        }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       <div className="group flex items-start gap-3 rounded-xl border border-slate-800 bg-slate-900/50 p-4 backdrop-blur-sm transition-all duration-300 hover:border-yellow-500/50 hover:bg-slate-900/80">
@@ -174,11 +173,11 @@ function AwardBadge({ award, index }: { award: string; index: number }) {
   );
 }
 
-function CertificationCard({ 
-  certification, 
-  index 
-}: { 
-  certification: typeof certifications[number]; 
+function CertificationCard({
+  certification,
+  index
+}: {
+  certification: typeof certifications[number];
   index: number;
 }) {
   const [isVisible, setIsVisible] = useState(false);
@@ -201,27 +200,43 @@ function CertificationCard({
     return () => observer.disconnect();
   }, []);
 
+  const hasUrl = certification.url && certification.url.trim() !== "";
+
+  const cardContent = (
+    <div className={`group flex items-start gap-4 rounded-xl border border-slate-800 bg-slate-900/50 p-5 backdrop-blur-sm transition-all duration-300 hover:border-purple-500/50 hover:bg-slate-900/80 ${hasUrl ? "cursor-pointer" : ""}`}>
+      <div className="rounded-lg bg-purple-500/20 p-2">
+        <BadgeCheck className="h-5 w-5 text-purple-400" />
+      </div>
+      <div className="flex-1">
+        <div className="flex items-start justify-between">
+          <h4 className="font-semibold text-slate-50">{certification.name}</h4>
+          {hasUrl && (
+            <ExternalLink className="h-4 w-4 text-slate-500 transition-colors group-hover:text-purple-400" />
+          )}
+        </div>
+        <p className="text-sm text-purple-400">{certification.issuer}</p>
+        <div className="mt-2 flex items-center gap-1.5 text-xs text-slate-400">
+          <Calendar className="h-3 w-3" />
+          <span>{certification.period}</span>
+        </div>
+      </div>
+    </div>
+  );
+
   return (
     <div
       ref={ref}
-      className={`transform transition-all duration-500 ease-out ${
-        isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
-      }`}
+      className={`transform transition-all duration-500 ease-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
+        }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
-      <div className="group flex items-start gap-4 rounded-xl border border-slate-800 bg-slate-900/50 p-5 backdrop-blur-sm transition-all duration-300 hover:border-purple-500/50 hover:bg-slate-900/80">
-        <div className="rounded-lg bg-purple-500/20 p-2">
-          <BadgeCheck className="h-5 w-5 text-purple-400" />
-        </div>
-        <div className="flex-1">
-          <h4 className="font-semibold text-slate-50">{certification.name}</h4>
-          <p className="text-sm text-purple-400">{certification.issuer}</p>
-          <div className="mt-2 flex items-center gap-1.5 text-xs text-slate-400">
-            <Calendar className="h-3 w-3" />
-            <span>{certification.period}</span>
-          </div>
-        </div>
-      </div>
+      {hasUrl ? (
+        <a href={certification.url} target="_blank" rel="noopener noreferrer">
+          {cardContent}
+        </a>
+      ) : (
+        cardContent
+      )}
     </div>
   );
 }
@@ -251,9 +266,8 @@ export function AcademicsSection() {
     <section ref={ref} className="py-16 md:py-24" id="education">
       {/* Section Header */}
       <div
-        className={`mb-12 transform transition-all duration-700 ${
-          isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-        }`}
+        className={`mb-12 transform transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
       >
         <h2 className="text-3xl font-bold text-slate-50 md:text-4xl">Education</h2>
         <p className="mt-2 text-slate-400">Academic Background</p>
@@ -261,9 +275,8 @@ export function AcademicsSection() {
 
       {/* Main Education Card */}
       <div
-        className={`mb-16 transform transition-all delay-200 duration-700 ${
-          isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-        }`}
+        className={`mb-16 transform transition-all delay-200 duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
       >
         <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-8 backdrop-blur-sm">
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
@@ -296,9 +309,8 @@ export function AcademicsSection() {
       {/* Organizations Section */}
       <div className="mb-16">
         <div
-          className={`mb-8 flex items-center gap-3 transform transition-all delay-300 duration-700 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+          className={`mb-8 flex items-center gap-3 transform transition-all delay-300 duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
         >
           <div className="rounded-lg bg-blue-500/20 p-2">
             <Users className="h-5 w-5 text-blue-400" />
@@ -315,9 +327,8 @@ export function AcademicsSection() {
       {/* Global Programs Section */}
       <div className="mb-16">
         <div
-          className={`mb-8 flex items-center gap-3 transform transition-all delay-400 duration-700 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+          className={`mb-8 flex items-center gap-3 transform transition-all delay-400 duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
         >
           <div className="rounded-lg bg-green-500/20 p-2">
             <Globe className="h-5 w-5 text-green-400" />
@@ -334,9 +345,8 @@ export function AcademicsSection() {
       {/* Awards & Achievements Section */}
       <div className="mb-16">
         <div
-          className={`mb-8 flex items-center gap-3 transform transition-all delay-500 duration-700 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+          className={`mb-8 flex items-center gap-3 transform transition-all delay-500 duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
         >
           <div className="rounded-lg bg-yellow-500/20 p-2">
             <Trophy className="h-5 w-5 text-yellow-500" />
@@ -353,9 +363,8 @@ export function AcademicsSection() {
       {/* Certifications Section */}
       <div>
         <div
-          className={`mb-8 flex items-center gap-3 transform transition-all delay-600 duration-700 ${
-            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+          className={`mb-8 flex items-center gap-3 transform transition-all delay-600 duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+            }`}
         >
           <div className="rounded-lg bg-purple-500/20 p-2">
             <BadgeCheck className="h-5 w-5 text-purple-400" />

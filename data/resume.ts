@@ -52,12 +52,12 @@ export const experiences = [
     ],
   },
   {
-    company: "PT Divusi (IT Consultant under ITB)",
+    company: "PT Divusi",
     role: "Data Scientist",
     location: "Bandung, Indonesia",
     period: "January - February 2025",
     bullets: [
-      "Analyzed supply and demand datasets covering 34 provinces and 514 cities/regencies across Indonesia, sourced from BUMN company(e.g., Pertamina Patra Niaga) and international enterprises.",
+      "Analyzed supply and demand datasets across 34 provinces and 514 cities/regencies in Indonesia, sourced from state-owned gasoline company (BUMN) and international enterprises.",
       "Developed 12-month time-series forecasting models using Tree-based Machine Learning algorithms (e.g., Random Forest, XGBoost) to predict supply and demand with high accuracy.",
       "Designed interactive dashboards to visualize correlation analysis and delivered strategic recommendations to stakeholders.",
       "Worked in a dynamic cross-functional team with Data Engineers and Software Engineers to streamline data pipelines and model deployment.",
@@ -152,12 +152,26 @@ export const certifications = [
   {
     name: "AI Engineer for Data Scientist Associate",
     issuer: "Datacamp",
-    period: "February 2025",
+    period: "April 2025",
+    url: "https://www.datacamp.com/certificate/AEDS0018905109321", // Tambahkan URL credential di sini
   },
   {
     name: "Microsoft Office Specialist: Data Analytics",
     issuer: "Microsoft",
     period: "September 2025",
+    url: "https://www.linkedin.com/in/jiryan-farokhi/details/certifications/1721371251453/single-media-viewer/?profileId=ACoAAD0Pk9wBN2Ea57Z-7_FtmWdOwnMfkrv2wyM", // Tambahkan URL credential di sini
+  },
+  {
+    name: "SQL Advance Certificate",
+    issuer: "Hackerrank",
+    period: "July 2024",
+    url: "https://www.hackerrank.com/certificates/07462d2d29df", // Tambahkan URL credential di sini
+  },
+  {
+    name: "Fundamentals of Deep Learning",
+    issuer: "NVIDIA",
+    period: "September 2025",
+    url: "https://learn.nvidia.com/certificates?id", // Tambahkan URL credential di sini
   },
 ] as const;
 
