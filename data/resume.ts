@@ -44,11 +44,11 @@ export const experiences = [
     role: "Data Scientist Lead",
     location: "Surabaya, Indonesia",
     period: "February 2024 - November 2025",
-    bullets: [
-      "Designed and built scalable RESTful APIs to facilitate seamless data communication between client and server, ensuring low latency and high reliability.",
-      "Built integrations between Google Maps Platform, Search API, and OpenAI API to enrich raw location data into intelligent analytical insights.",
-      "Developed robust backend logic to perform automated and efficient scraping and processing of geospatial data.",
-      "Compiled comprehensive and standardized API documentation (using Swagger/OpenAPI) to streamline collaboration with frontend teams and external startup partners.",
+    bullets: ["Developed a stateless HTTP backend service for Maps Lead AI, commissioned by Boring AI, to generate business leads based on criteria like business type, location, and reviews." 
+              "Built five HTTP POST endpoints, integrated with the Workflow Executor and utilized Google Maps, SearchAPI.io, and OpenAI APIs for search, scraping, and review analysis, ensuring precise lead scoring."
+              "Leading a team of startups to delegate in data science competitions and successfully winning more than 10 championships at the national level."
+              "Teach some material about Sentiment Analysis to members for better understanding about NLP."
+              "Be delegated to some business events for collaboration like AWS, AMD, and Matahari Department Store.",
     ],
   },
   {
@@ -56,12 +56,12 @@ export const experiences = [
     role: "Data Scientist",
     location: "Bandung, Indonesia",
     period: "January - February 2025",
-    bullets: [
-      "Analyzed supply and demand datasets across 34 provinces and 514 cities/regencies in Indonesia, sourced from state-owned gasoline company (BUMN) and international enterprises.",
-      "Developed 12-month time-series forecasting models using Tree-based Machine Learning algorithms (e.g., Random Forest, XGBoost) to predict supply and demand with high accuracy.",
-      "Designed interactive dashboards to visualize correlation analysis and delivered strategic recommendations to stakeholders.",
-      "Worked in a dynamic cross-functional team with Data Engineers and Software Engineers to streamline data pipelines and model deployment.",
-
+    bullets: ["Analyzed supply and demand datasets across 34 provinces and 514 cities/regencies in Indonesia, sourced from Danantara company and international enterprises."
+              "Developed 12-month time-series forecasting models using tree-based machine learning algorithms (e.g., Random Forest, XGBoost) to predict supply and demand with high accuracy."
+              "Make A/B testing experiments for analyzing seasonal analysis with some stats models and autocorrelation function."
+              "Designed interactive dashboards with streamlit to visualize correlation analysis and delivered strategic recommendations to stakeholders."
+              "Worked in a dynamic cross-functional team with data engineers and software engineers to streamline data pipelines and model deployment."
+              "Successfully get RMSLE 0.0410 and RMSE 0.2875 with very nonlinear data.",
     ],
   },
   {
@@ -92,9 +92,9 @@ export const organizations = [
     role: "Data Scientist Lead",
     period: "October 2024 - Present",
     bullets: [
-      "Scaled community outreach to 3,500+ members and curated the data science learning path.",
-      "Hosted 70-participant data analytics workshops and co-designed Build with AI marketing materials with Google experts.",
-      "Onboarded members into data competitions and elevated event engagement past 100+ attendees.",
+        "Contributed to the development of a one-month machine learning curriculum for beginner to intermediate learners, focusing on supervised and unsupervised learning concepts." 
+        "Designed engaging, hands-on content to ensure accessibility and practical understanding."
+        "Organized two technical workshops and served as a speaker for one, delivering a presentation and facilitating a coding session for over 100 participants, incorporating real-world case studies to enhance applied learning and foster a collaborative tech community."
     ],
   },
   {
@@ -115,21 +115,11 @@ export const globalPrograms = [
     role: "Delegate",
     location: "Tokyo, Japan",
     period: "September 2024",
-    highlights: [
-      "Built time series solutions for Japanese partners alongside cross-cultural student teams.",
-      "Delivered bilingual presentations and collaborated on applied machine learning case studies.",
+    highlights: ["Make a time series project to predict sales with data science techniques."
+                 "Learn to work together with international students."
+                 "Got the 3rd rank from all teams with collaboration between Indonesian and Japanese students."
     ],
-  },
-  {
-    title: "Global Project Based Learning ITS - SIT 2023 (Inbound)",
-    role: "Delegate",
-    location: "Surabaya, Indonesia",
-    period: "August 2023",
-    highlights: [
-      "Partnered with Japanese students to craft life-improvement projects and MATLAB prototypes.",
-      "Fostered long-term collaboration with visiting professors and peers from SIT Japan.",
-    ],
-  },
+  }
 ] as const;
 
 export const awards = [
