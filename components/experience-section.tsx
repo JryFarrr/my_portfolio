@@ -6,10 +6,10 @@ import { experiences } from "@/data/resume";
 
 // Stats data for experience section
 const experienceStats = [
-  { value: 3, suffix: "+", label: "Years Experience" },
+  { value: 2, suffix: "+", label: "Years Experience" },
   { value: 10, suffix: "+", label: "Projects Completed" },
-  { value: 5, suffix: "+", label: "Companies Worked" },
-  { value: 500, suffix: "+", label: "Code Commits" },
+  { value: 3, suffix: "+", label: "Companies Worked" },
+  { value: 350, suffix: "+", label: "Code Commits" },
 ];
 
 function AnimatedCounter({ 
