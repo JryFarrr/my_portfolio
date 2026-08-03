@@ -67,6 +67,13 @@ const notebookProjects = [
 // Deployed Projects Data (Full-stack & Web Applications)
 const deployedProjects: typeof notebookProjects = [
   {
+    title: "IDX Stock Warehouse",
+    description: "A daily ETL pipeline that tracks Indonesia's top 5 stocks and visualizes their gains, losses, and rupiah correlation.",
+    tags: ["Knowledge Graph", "LLM", "RAG", "Neo4J"],
+    github: "https://github.com/JryFarrr/etl-mining",
+    image: "/images/projects/etl-mining.png",
+  },
+  {
     title: "Graph RAG Knowledge Graph with Pubmed Data",
     description: "Website with Pubmed Data converted to TTL format. Built Knowledge Graph based on Neo4J with node extraction and graph relation for complex document understanding.",
     tags: ["Knowledge Graph", "LLM", "RAG", "Neo4J"],

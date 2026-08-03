@@ -39,6 +39,17 @@ export const contactDetails = [
 ] as const;
 
 export const experiences = [
+  
+  {
+    company: "GDP-Labs",
+    role: "AI Engineer Intern",
+    location: "Surabaya, Indonesia",
+    period: "February - July 2026",
+      bullets: ["Built end-to-end Agentic AI for data science named GL Tabular to enhance efficiency by 90%, improving workflow faster from 30 days to one week.",
+                "Built two framework Data Science Agents for forecasting and anomaly detection with adaptation from SOTA research, enhancing the performance and accuracy by 95% and token reduction by 80%.",
+                "Built GL Vision for spoof detection in facial recognition with more than 10 cases, reducing failures of APCER and BPCER by 96%."
+    ],
+  },
   {
     company: "Avalon AI",
     role: "Data Scientist Lead",
@@ -64,16 +75,16 @@ export const experiences = [
               "Successfully get RMSLE 0.0410 and RMSE 0.2875 with very nonlinear data.",
     ],
   },
-  {
-    company: "Data Bridge",
-    role: "Data Scientist Freelancer",
-    location: "Surabaya, Indonesia",
-    period: "December 2024 - Present",
-    bullets: [
-      "Design classification models to boost customer analytics on temporal data.",
-      "Visualize business performance using Power BI, Tableau, and Looker Studio dashboards.",
-    ],
-  },
+  // {
+  //   company: "Data Bridge",
+  //   role: "Data Scientist Freelancer",
+  //   location: "Surabaya, Indonesia",
+  //   period: "December 2024 - Present",
+  //   bullets: [
+  //     "Design classification models to boost customer analytics on temporal data.",
+  //     "Visualize business performance using Power BI, Tableau, and Looker Studio dashboards.",
+  //   ],
+  // },
   {
     company: "Institut Teknologi Sepuluh Nopember",
     role: "Computer Laboratory Assistant",
