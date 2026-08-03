@@ -69,7 +69,7 @@ const deployedProjects: typeof notebookProjects = [
   {
     title: "IDX Stock Warehouse",
     description: "A daily ETL pipeline that tracks Indonesia's top 5 stocks and visualizes their gains, losses, and rupiah correlation.",
-    tags: ["Knowledge Graph", "LLM", "RAG", "Neo4J"],
+    tags: ["ETL", "Data Mining", "Database Managements", "SQL"],
     github: "https://github.com/JryFarrr/etl-mining",
     image: "/images/projects/etl-mining.png",
   },

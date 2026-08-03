@@ -58,8 +58,6 @@ export const experiences = [
     bullets: ["Developed a stateless HTTP backend service for Maps Lead AI, commissioned by Boring AI, to generate business leads based on criteria like business type, location, and reviews.",
               "Built five HTTP POST endpoints, integrated with the Workflow Executor and utilized Google Maps, SearchAPI.io, and OpenAI APIs for search, scraping, and review analysis, ensuring precise lead scoring.",
               "Leading a team of startups to delegate in data science competitions and successfully winning more than 10 championships at the national level.",
-              "Teach some material about Sentiment Analysis to members for better understanding about NLP.",
-              "Be delegated to some business events for collaboration like AWS, AMD, and Matahari Department Store.",
     ],
   },
   {
@@ -67,12 +65,9 @@ export const experiences = [
     role: "Data Scientist",
     location: "Bandung, Indonesia",
     period: "January - February 2025",
-    bullets: ["Analyzed supply and demand datasets across 34 provinces and 514 cities/regencies in Indonesia, sourced from Danantara company and international enterprises.",
-              "Developed 12-month time-series forecasting models using tree-based machine learning algorithms (e.g., Random Forest, XGBoost) to predict supply and demand with high accuracy.",
-              "Make A/B testing experiments for analyzing seasonal analysis with some stats models and autocorrelation function.",
-              "Designed interactive dashboards with streamlit to visualize correlation analysis and delivered strategic recommendations to stakeholders.",
-              "Worked in a dynamic cross-functional team with data engineers and software engineers to streamline data pipelines and model deployment.",
-              "Successfully get RMSLE 0.0410 and RMSE 0.2875 with very nonlinear data.",
+    bullets: ["Analyzed supply and demand datasets across 34 provinces and 514 cities/regencies in Indonesia, sourced from BUMN company and international enterprises.",
+              "Developed and A/B tested tree-based forecasting models (Random Forest, XGBoost) for 12-month supply-demand prediction, reducing RMSE by 89%.",
+              "Designed interactive dashboards with Streamlit to visualize correlation analysis and delivered strategic recommendations to stakeholders.",
     ],
   },
   // {
@@ -103,11 +98,8 @@ export const organizations = [
     role: "Data Scientist Lead",
     period: "October 2024 - Present",
     bullets: [
-        "Contributed to the development of a one-month machine learning curriculum for beginner to intermediate learners, focusing on supervised and unsupervised learning concepts.",
-        "Designed engaging, hands-on content to ensure accessibility and practical understanding.","Scaled community outreach to 3,500+ members and curated the data science learning path.",
-      "Hosted 70-participant data analytics workshops and co-designed Build with AI marketing materials with Google experts.",
-      "Onboarded members into data competitions and elevated event engagement past 100+ attendees.",
-        "Organized two technical workshops and served as a speaker for one, delivering a presentation and facilitating a coding session for over 100 participants, incorporating real-world case studies to enhance applied learning and foster a collaborative tech community.",
+        "Contributed to the development of a one-month machine learning mini bootcamp and learning curriculum  for beginner to intermediate learners, focusing on supervised and unsupervised learning in machine learning concepts.", 
+        "Become a speaker for delivering material about  introduction to machine learning with coding sessions for over 100 participants, incorporating real-world case studies to enhance applied learning and foster a collaborative tech community."
     ],
   },
   {
@@ -115,9 +107,9 @@ export const organizations = [
     role: "Manager of Academics",
     period: "February 2024 - January 2025",
     bullets: [
-      "Secured fourth-highest applicant intake across 25 registered positions in the new academic division.",
-      "Coordinated an international scientific writing seminar with faculty and global speakers.",
+      "Researched and wrote articles on emerging technology trends for IEEE ITS Student Branch's magazine, helping members stay informed on developments in AI, smart electrical systems, and IoT",
       "Formed partnerships to bring in overseas speakers and drive 60-attendee international forums.",
+      "Coordinated an international scientific writing seminar with faculty and global speakers"
     ],
   },
 ] as const;
