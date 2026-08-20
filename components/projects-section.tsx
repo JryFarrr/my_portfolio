@@ -69,7 +69,7 @@ const deployedProjects: typeof notebookProjects = [
   {
     title: "Product Herbal Recommendation System",
     description: "A tool for sellers and resellers of herbal products (such as turmeric-tamarind drinks, honey, etc.) to identify products currently trending on TikTok and Instagram.",
-    tags: ["Recommendation System", "LLM", "Multi-Criteria Decision Making", "Data Mining", "Data Analysis"],
+    tags: ["Recommendation System", "LLM", "Multi-Criteria Decision Making", "Data Mining", "Data Analysis", "Apify"],
     github: "https://github.com/JryFarrr/product-herbal-recommendations.git",
     image: "/images/projects/herbal-recommendations.jpeg",
   },
