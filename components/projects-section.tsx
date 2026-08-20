@@ -67,6 +67,13 @@ const notebookProjects = [
 // Deployed Projects Data (Full-stack & Web Applications)
 const deployedProjects: typeof notebookProjects = [
   {
+    title: "Product Herbal Recommendation System",
+    description: "A tool for sellers and resellers of herbal products (such as turmeric-tamarind drinks, honey, etc.) to identify products currently trending on TikTok and Instagram.",
+    tags: ["Recommendation System", "LLM", "Multi-Criteria Decision Making", "Data Mining", "Data Analysis"],
+    github: "https://github.com/JryFarrr/product-herbal-recommendations.git",
+    image: "/images/projects/herbal-recommendations.jpeg",
+  },
+  {
     title: "IDX Stock Warehouse",
     description: "A daily ETL pipeline that tracks Indonesia's top 5 stocks and visualizes their gains, losses, and rupiah correlation.",
     tags: ["ETL", "Data Mining", "Database Managements", "SQL"],
@@ -114,7 +121,7 @@ const deployedProjects: typeof notebookProjects = [
     tags: ["NLP", "OpenAI API", "Machine Learning", "IBM"],
     github: "https://github.com/JryFarrr/boringai_project_gmaps_analytics",
     image: "/images/projects/mapleads.jpg",
-  }
+  },
 ];
 
 // Data Visualization Projects Data
