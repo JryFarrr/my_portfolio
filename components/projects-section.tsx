@@ -32,7 +32,7 @@ const notebookProjects = [
     description: "Predict sales from stores using Random Forest, XGBoost, and feature engineering. Project for International Experience in Japan.",
     tags: ["Time Series", "Random Forest", "Machine Learning"],
     github: "https://github.com/JryFarrr/timeseries-predictsales-gpbljapan/tree/main",
-    image: "/images/projects/japan.jpg",
+    image: "/images/projects/gpbl.png",
   },
   {
     title: "Motion Fall/Non-Fall Classification",
