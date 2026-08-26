@@ -71,7 +71,7 @@ const deployedProjects: typeof notebookProjects = [
     description: "A NotebookLM-style AI tool that creates isolated notebooks and lets you chat with an AI that answers grounded in those sources only (PDF, pasted text, web URLs). Four user-triggered agents extend this: Summarize, Analysis Report, a Research agent that finds related academic papers, and a Math agent that produces mathematical write-ups of a paper's content.",
     tags: ["AI Agents", "LLM", "Graph RAG", "Langchain", "Database Mining"],
     github: "https://github.com/JryFarrr/docs-qanda.git",
-    image: "/images/projects/docs-qanda.jpeg",
+    image: "/images/projects/docsqanda.png",
   },
   {
     title: "Product Herbal Recommendation System",
