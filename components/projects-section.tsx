@@ -67,9 +67,16 @@ const notebookProjects = [
 // Deployed Projects Data (Full-stack & Web Applications)
 const deployedProjects: typeof notebookProjects = [
   {
+    title: "Docs Q&A",
+    description: "A NotebookLM-style AI tool that creates isolated notebooks and lets you chat with an AI that answers grounded in those sources only (PDF, pasted text, web URLs). Four user-triggered agents extend this: Summarize, Analysis Report, a Research agent that finds related academic papers, and a Math agent that produces mathematical write-ups of a paper's content.",
+    tags: ["AI Agents", "LLM", "Graph RAG", "Langchain", "Database Mining"],
+    github: "https://github.com/JryFarrr/docs-qanda.git",
+    image: "/images/projects/docs-qanda.jpeg",
+  },
+  {
     title: "Product Herbal Recommendation System",
     description: "A tool for sellers and resellers of herbal products (such as turmeric-tamarind drinks, honey, etc.) to identify products currently trending on TikTok and Instagram.",
-    tags: ["Recommendation System", "LLM", "Multi-Criteria Decision Making", "Data Mining", "Data Analysis", "Apify"],
+    tags: ["Recommendation System", "LLM", "Multi-Criteria Decision Analysis", "Data Mining", "Data Analysis", "Apify"],
     github: "https://github.com/JryFarrr/product-herbal-recommendations.git",
     image: "/images/projects/herbal-recommendations.jpeg",
   },
@@ -122,6 +129,7 @@ const deployedProjects: typeof notebookProjects = [
     github: "https://github.com/JryFarrr/boringai_project_gmaps_analytics",
     image: "/images/projects/mapleads.jpg",
   },
+
 ];
 
 // Data Visualization Projects Data
