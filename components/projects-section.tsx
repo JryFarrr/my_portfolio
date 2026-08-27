@@ -134,6 +134,14 @@ const deployedProjects: typeof notebookProjects = [
 
 // Data Visualization Projects Data
 const visualizationProjects: typeof notebookProjects = [
+
+  {
+    title: "SMS International Transactions Dashboard",
+    description: "This is my final year projects to visualize SMS International Transactions services from Telecommunication company in Indonesia. The dashboard is built using Google Looker Studio.",
+    tags: ["Data Visualization", "Data Analysis"],
+    github: "https://datastudio.google.com/reporting/81444e99-63d1-4bfa-8621-f2a6d508dd33",
+    image: "/images/projects/smsinternational.png",
+  },
   {
     title: "OMITS Sales Dashboard",
     description: "Dashboard to visualize sales of merchandise from OMITS (Olimpiade Matematika ITS 2022).",
