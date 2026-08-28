@@ -97,7 +97,7 @@ const deployedProjects: typeof notebookProjects = [
   {
     title: "SoulMatch Website",
     description: "Full stack project using NEXT JS with Supabase integration. Features Admin and SuperAdmin services.",
-    tags: ["Next JS", "Supabase", "PostgreSQL", "Full Stack"],
+    tags: ["Next JS", "Supabase", "PostgreSQL", "Full Stack", "Database Management System"],
     github: "https://github.com/JryFarrr/tugas_web_ets.git",
     image: "/images/projects/soulmatch.jpg",
   },
@@ -138,14 +138,14 @@ const visualizationProjects: typeof notebookProjects = [
   {
     title: "SMS International Transactions Dashboard",
     description: "This is my final year projects to visualize SMS International Transactions services from Telecommunication company in Indonesia. The dashboard is built using Google Looker Studio.",
-    tags: ["Data Visualization", "Data Analysis"],
+    tags: ["Data Visualization", "Data Analysis", "Google Looker Studio"],
     github: "https://datastudio.google.com/reporting/81444e99-63d1-4bfa-8621-f2a6d508dd33",
     image: "/images/projects/smsinternational.png",
   },
   {
     title: "OMITS Sales Dashboard",
     description: "Dashboard to visualize sales of merchandise from OMITS (Olimpiade Matematika ITS 2022).",
-    tags: ["Data Visualization", "Data Analysis"],
+    tags: ["Data Visualization", "Data Analysis", "Tableau"],
     github: "https://public.tableau.com/views/ProjectKPP_BOOM/Dashboard1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link",
     image: "/images/projects/omits.png",
   },
