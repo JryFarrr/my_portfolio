@@ -69,10 +69,10 @@ const deployedProjects: typeof notebookProjects = [
   {
     title: "Docs Q&A",
     description: "A NotebookLM-style AI tool that creates isolated notebooks and lets you chat with an AI that answers grounded in those sources only (PDF, pasted text, web URLs). Four user-triggered agents extend this: Summarize, Analysis Report, a Research agent that finds related academic papers, and a Math agent that produces mathematical write-ups of a paper's content.",
-    tags: ["AI Agents", "LLM", "Graph RAG", "Langchain", "Database Mining"],
+    tags: ["Supabase", "Ollama", "Graph RAG", "LangChain", "FastAPI", "NextJS"],
     github: "https://github.com/JryFarrr/docs-qanda.git",
     image: "/images/projects/docsqanda.png",
-  },
+  },  
   {
     title: "Product Herbal Recommendation System",
     description: "A tool for sellers and resellers of herbal products (such as turmeric-tamarind drinks, honey, etc.) to identify products currently trending on TikTok and Instagram.",
@@ -104,7 +104,7 @@ const deployedProjects: typeof notebookProjects = [
   {
     title: "Content Engagement Dashboard (Satria Data Finalist)",
     description: "End-to-end project from scraping data to dashboard. Using Content Performance Index with PCA method. Use business acumen skills to create a content performance index that provides insightful recommendations for understanding the dashboard and use LLM for summarization and topic modelling.",
-    tags: ["EDA", "NLP", "Next JS", "Docker", "Visualization"],
+    tags: ["Whisper", "GEMINI API", "Docker", "FastAPI", "NextJS", "Sentiment Analysis", "Topic Modelling"],
     github: "https://github.com/JryFarrr/satria_data.git",
     image: "/images/projects/cgd.png",
   },
@@ -125,7 +125,7 @@ const deployedProjects: typeof notebookProjects = [
   {
     title: "Mapleads AI - Google Maps Analytics",
     description: "API service to collect business data from Google Maps, analyze with OpenAI, and provide insights on strengths, weaknesses, and suitability.",
-    tags: ["NLP", "OpenAI API", "Machine Learning", "IBM"],
+    tags: ["Integrated API", "Search API", "Open AI API", "Maps API", "Swagger Documentation"],
     github: "https://github.com/JryFarrr/boringai_project_gmaps_analytics",
     image: "/images/projects/mapleads.jpg",
   },
