@@ -15,7 +15,7 @@ export function HeroButtons() {
           href="/cv/CV_Jiryan Farokhi.pdf"
           download="CV_Jiryan Farokhi.pdf"
           type="application/pdf"
-          className="group flex items-center justify-center gap-2 rounded-full border border-blue-500 bg-transparent px-8 py-3 text-sm font-medium uppercase tracking-wider text-blue-400 transition-all hover:bg-blue-500 hover:text-slate-950"
+          className="group flex items-center justify-center gap-2 rounded-full border border-blue-600 bg-transparent px-8 py-3 text-sm font-medium uppercase tracking-wider text-blue-600 transition-all hover:bg-blue-600 hover:text-white dark:border-blue-400 dark:text-blue-400 dark:hover:bg-blue-500 dark:hover:text-slate-950"
         >
           Download CV
           <svg
@@ -33,10 +33,10 @@ export function HeroButtons() {
           </svg>
         </a>
 
-        {/* Get in Touch Button - Hidden on mobile */}
+        {/* Get in Touch Button */}
         <button
           onClick={() => setIsContactOpen(true)}
-          className="group hidden items-center gap-2 rounded-full border border-slate-600 bg-transparent px-6 py-3 text-sm font-medium uppercase tracking-wider text-slate-300 transition-all hover:border-blue-400 hover:text-blue-400 sm:flex"
+          className="group hidden items-center gap-2 rounded-full border border-slate-300 bg-transparent px-6 py-3 text-sm font-medium uppercase tracking-wider text-slate-700 transition-all hover:border-blue-600 hover:text-blue-600 dark:border-slate-700 dark:text-slate-300 dark:hover:border-blue-400 dark:hover:text-blue-400 sm:flex"
         >
           Get in Touch
           <svg
@@ -49,12 +49,12 @@ export function HeroButtons() {
               strokeLinecap="round"
               strokeLinejoin="round"
               strokeWidth={2}
-              d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+              d="M3 8l7.89 5.26a2 2 0 0 02.22 0L21 8M5 19h14a2 2 0 0 02-2V7a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 02 2z"
             />
           </svg>
         </button>
 
-        {/* Social Links - Hidden on mobile */}
+        {/* Social Links */}
         <div className="hidden sm:block">
           <SocialLinks />
         </div>

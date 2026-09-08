@@ -3,7 +3,7 @@ export const summary = `Motivated and Fast-learner Mathematics (Computer Science
 export const contactLinks = [
   {
     label: "Email",
-    href: "mailto:500221102@mhs.its.ac.id",
+    href: "mailto:jiryanfarokhi@gmail.com",
   },
   {
     label: "LinkedIn",
@@ -30,13 +30,136 @@ export const contactDetails = [
   },
   {
     label: "Email",
-    value: "500221102@mhs.its.ac.id",
+    value: "jiryanfarokhi@gmail.com",
   },
   {
     label: "Interests",
     value: "Machine Learning, Big Data, AI, Community Building",
   },
 ] as const;
+
+export const aboutInfo = {
+  headline: "Architecting intelligent systems across AI, Data, and Cloud.",
+  paragraphs: [
+    "I am a Mathematics (Computer Science) fresh graduate from Institut Teknologi Sepuluh Nopember with a strong foundation in AI, Data Science, and technology-driven problem solving. Experienced in leading teams and managing projects across academic competitions, IT consulting, and AI initiatives, from identifying business problems and coordinating team efforts to developing and deploying data-driven solutions.",
+    "Skilled in Python, SQL, Tableau, and Google Looker Studio, with experience in NLP, Computer Vision, LLM, RAG, and backend systems. Recognized for strong leadership, communication, teamwork, structured problem solving, and the ability to adapt and drive projects toward impactful results."
+  ],
+  highlights: [
+    "Agentic AI",
+    "Machine Learning",
+    "Deep Learning",
+    "LLM & RAG",
+    "Computer Vision",
+    "Data Analytics",
+    "Statistical Modeling",
+    "Backend & APIs",
+    "Cloud & DevOps",
+    "CI/CD",
+    "Agile Leadership"
+  ],
+  pillars: [
+    {
+      icon: "bot",
+      title: "AI & Machine Learning Engineering",
+      description: "Building Agentic AI frameworks, LLM & RAG pipelines, spoof detection systems, and production-ready deep learning architectures."
+    },
+    {
+      icon: "chart",
+      title: "Data Science & Advanced Analytics",
+      description: "Extracting actionable insights, developing predictive models, time-series forecasting, and crafting executive BI dashboards."
+    },
+    {
+      icon: "server",
+      title: "Backend & Distributed Systems",
+      description: "Engineering scalable HTTP REST APIs, microservices, asynchronous task workers, and real-time data scraping pipelines."
+    },
+    {
+      icon: "cloud",
+      title: "Cloud, MLOps & Infrastructure",
+      description: "Designing cloud-native workflows on AWS & GCP, containerized Docker environments, CI/CD pipelines, and automated deployments."
+    }
+  ]
+};
+
+export const skillsCategories = [
+  {
+    title: "AI & Machine Learning",
+    icon: "bot",
+    skills: [
+      "PyTorch",
+      "TensorFlow",
+      "Scikit-Learn",
+      "LangChain",
+      "LangGraph",
+      "Hugging Face",
+      "OpenCV",
+      "Agentic AI",
+      "LLM & RAG",
+      "Deep Learning",
+      "Tree-based Models",
+    ]
+  },
+  {
+    title: "Data Science & Analytics",
+    icon: "chart",
+    skills: [
+      "Python",
+      "SQL",
+      "Pandas",
+      "NumPy",
+      "Jupyter",
+      "Tableau",
+      "Looker Studio",
+      "Power BI",
+      "Streamlit",
+      "Matplotlib",
+      "Seaborn",
+      "Statsmodels"
+    ]
+  },
+  {
+    title: "Backend & Data Engineering",
+    icon: "server",
+    skills: [
+      "FastAPI",
+      "Django REST Framework",
+      "Flask",
+      "Node.js",
+      "PostgreSQL",
+      "MySQL",
+      "RESTful APIs",
+      "Web Scraping",
+    ]
+  },
+  {
+    title: "Cloud & DevOps",
+    icon: "cloud",
+    skills: [
+      "AWS",
+      "Google Cloud (GCP)",
+      "Docker",
+      "Git",
+      "GitHub Actions",
+      "CI/CD",
+      "Linux / Bash",
+      "Vercel",
+    ]
+  },
+  {
+    title: "Methodologies & Leadership",
+    icon: "code",
+    skills: [
+      "Project Management",
+      "Team Leadership",
+      "Agile & Scrum",
+      "System Architecture",
+      "Scientific Research",
+      "Data Storytelling",
+      "TDD"
+    ]
+  }
+];
+
 
 export const experiences = [
   

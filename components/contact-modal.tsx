@@ -20,7 +20,6 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Create mailto link with form data
     const mailtoLink = `mailto:jiryanfarokhi@gmail.com?subject=${encodeURIComponent(
       formData.subject || "Contact from Portfolio"
     )}&body=${encodeURIComponent(
@@ -42,16 +41,16 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4">
       {/* Backdrop */}
       <div
-        className="absolute inset-0 bg-slate-950/80 backdrop-blur-sm"
+        className="absolute inset-0 bg-slate-950/60 backdrop-blur-sm"
         onClick={onClose}
       />
 
       {/* Modal */}
-      <div className="relative w-full max-w-lg rounded-2xl border border-slate-700 bg-slate-900 p-6 shadow-2xl">
+      <div className="relative w-full max-w-lg rounded-2xl border border-slate-200 bg-white p-6 shadow-2xl transition-colors duration-300 dark:border-slate-800 dark:bg-slate-900">
         {/* Close button */}
         <button
           onClick={onClose}
-          className="absolute right-4 top-4 text-slate-400 transition hover:text-slate-200"
+          className="absolute right-4 top-4 text-slate-400 transition hover:text-slate-600 dark:hover:text-slate-200"
         >
           <svg
             className="h-6 w-6"
@@ -70,13 +69,13 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
 
         {/* Header */}
         <div className="mb-6">
-          <h2 className="text-2xl font-bold text-slate-100">
+          <h2 className="text-2xl font-bold text-slate-900 dark:text-slate-100">
             Get in Touch
           </h2>
-          <p className="mt-1 text-sm text-slate-400">
+          <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
             Send me a message and I&apos;ll get back to you soon.
           </p>
-          <p className="mt-2 text-xs text-blue-400">
+          <p className="mt-2 text-xs text-blue-600 dark:text-blue-400">
             Your message will be sent directly to jiryanfarokhi@gmail.com
           </p>
         </div>
@@ -87,7 +86,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
             <div>
               <label
                 htmlFor="name"
-                className="mb-1 block text-sm text-slate-400"
+                className="mb-1 block text-sm font-medium text-slate-700 dark:text-slate-400"
               >
                 Name
               </label>
@@ -99,14 +98,14 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
                 }
-                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-2 text-slate-100 placeholder-slate-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-2 text-slate-900 placeholder-slate-400 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:placeholder-slate-500"
                 placeholder="Your name"
               />
             </div>
             <div>
               <label
                 htmlFor="email"
-                className="mb-1 block text-sm text-slate-400"
+                className="mb-1 block text-sm font-medium text-slate-700 dark:text-slate-400"
               >
                 Email
               </label>
@@ -118,7 +117,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
                 }
-                className="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-2 text-slate-100 placeholder-slate-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-2 text-slate-900 placeholder-slate-400 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:placeholder-slate-500"
                 placeholder="your@email.com"
               />
             </div>
@@ -127,7 +126,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
           <div>
             <label
               htmlFor="subject"
-              className="mb-1 block text-sm text-slate-400"
+              className="mb-1 block text-sm font-medium text-slate-700 dark:text-slate-400"
             >
               Subject
             </label>
@@ -138,7 +137,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
               onChange={(e) =>
                 setFormData({ ...formData, subject: e.target.value })
               }
-              className="w-full rounded-lg border border-slate-700 bg-slate-800 px-4 py-2 text-slate-100 placeholder-slate-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="w-full rounded-lg border border-slate-300 bg-slate-50 px-4 py-2 text-slate-900 placeholder-slate-400 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:placeholder-slate-500"
               placeholder="Subject (optional)"
             />
           </div>
@@ -146,7 +145,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
           <div>
             <label
               htmlFor="message"
-              className="mb-1 block text-sm text-slate-400"
+              className="mb-1 block text-sm font-medium text-slate-700 dark:text-slate-400"
             >
               Message
             </label>
@@ -158,7 +157,7 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
               onChange={(e) =>
                 setFormData({ ...formData, message: e.target.value })
               }
-              className="w-full resize-none rounded-lg border border-slate-700 bg-slate-800 px-4 py-2 text-slate-100 placeholder-slate-500 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              className="w-full resize-none rounded-lg border border-slate-300 bg-slate-50 px-4 py-2 text-slate-900 placeholder-slate-400 transition focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500 dark:border-slate-700 dark:bg-slate-800 dark:text-slate-100 dark:placeholder-slate-500"
               placeholder="Your message..."
             />
           </div>
@@ -167,14 +166,14 @@ export function ContactModal({ isOpen, onClose }: ContactModalProps) {
             <button
               type="button"
               onClick={onClose}
-              className="flex-1 rounded-lg border border-slate-700 px-4 py-2 text-sm text-slate-300 transition hover:border-slate-600 hover:bg-slate-800"
+              className="flex-1 rounded-lg border border-slate-300 px-4 py-2 text-sm font-medium text-slate-700 transition hover:border-slate-400 hover:bg-slate-100 dark:border-slate-700 dark:text-slate-300 dark:hover:border-slate-600 dark:hover:bg-slate-800"
             >
               Cancel
             </button>
             <button
               type="submit"
               disabled={isSubmitting}
-              className="flex-1 rounded-lg bg-blue-500 px-4 py-2 text-sm font-medium text-slate-950 transition hover:bg-blue-400 disabled:opacity-50"
+              className="flex-1 rounded-lg bg-blue-600 px-4 py-2 text-sm font-medium text-white shadow-sm transition hover:bg-blue-500 disabled:opacity-50 dark:bg-blue-500 dark:text-slate-950 dark:hover:bg-blue-400"
             >
               {isSubmitting ? "Sending..." : "Send Message"}
             </button>

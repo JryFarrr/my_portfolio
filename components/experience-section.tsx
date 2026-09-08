@@ -7,18 +7,18 @@ import { experiences } from "@/data/resume";
 // Stats data for experience section
 const experienceStats = [
   { value: 2, suffix: "+", label: "Years Experience" },
-  { value: 10, suffix: "+", label: "Projects Completed" },
-  { value: 3, suffix: "+", label: "Companies Worked" },
+  { value: 15, suffix: "+", label: "Projects Completed" },
+  { value: 3, suffix: "+", label: "Companies / Internships" },
   { value: 350, suffix: "+", label: "Code Commits" },
 ];
 
-function AnimatedCounter({ 
-  value, 
-  suffix = "", 
-  duration = 2000 
-}: { 
-  value: number; 
-  suffix?: string; 
+function AnimatedCounter({
+  value,
+  suffix = "",
+  duration = 2000,
+}: {
+  value: number;
+  suffix?: string;
   duration?: number;
 }) {
   const [count, setCount] = useState(0);
@@ -69,19 +69,19 @@ function AnimatedCounter({
   }, [isVisible, value, duration]);
 
   return (
-    <span ref={ref} className="text-3xl font-bold text-slate-50 md:text-4xl lg:text-5xl">
+    <span ref={ref} className="text-3xl font-bold text-slate-900 dark:text-slate-50 md:text-4xl lg:text-5xl">
       {count}
-      <span className="text-blue-400">{suffix}</span>
+      <span className="text-blue-600 dark:text-blue-400">{suffix}</span>
     </span>
   );
 }
 
-function ExperienceCard({ 
-  experience, 
+function ExperienceCard({
+  experience,
   index,
-  isLatest = false
-}: { 
-  experience: typeof experiences[number]; 
+  isLatest = false,
+}: {
+  experience: typeof experiences[number];
   index: number;
   isLatest?: boolean;
 }) {
@@ -114,28 +114,28 @@ function ExperienceCard({
       style={{ transitionDelay: `${index * 150}ms` }}
     >
       {/* Timeline dot */}
-      <div className="absolute -left-[9px] top-0 z-10 hidden h-4 w-4 rounded-full border-4 border-slate-950 bg-blue-500 md:block" />
-      
+      <div className="absolute -left-[9px] top-0 z-10 hidden h-4 w-4 rounded-full border-4 border-slate-50 bg-blue-500 dark:border-slate-950 md:block" />
+
       {/* Card */}
-      <div className="group rounded-2xl border border-slate-800 bg-slate-900/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-blue-500/50 hover:bg-slate-900/80 md:ml-6">
+      <div className="group rounded-2xl border border-slate-200/80 bg-white/70 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-blue-500/50 hover:shadow-lg dark:border-slate-800/80 dark:bg-slate-900/50 dark:hover:border-blue-400/50 dark:hover:bg-slate-900/80 md:ml-6">
         {/* Header */}
         <div className="mb-4 flex flex-wrap items-start justify-between gap-2">
           <div>
             <div className="flex items-center gap-2">
-              <h3 className="text-xl font-semibold text-slate-50">{experience.role}</h3>
+              <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-50">{experience.role}</h3>
               {isLatest && (
-                <span className="rounded-full bg-blue-500/20 px-3 py-0.5 text-xs font-medium text-blue-400">
+                <span className="rounded-full bg-blue-500/15 px-3 py-0.5 text-xs font-medium text-blue-600 dark:bg-blue-500/20 dark:text-blue-400">
                   Current
                 </span>
               )}
             </div>
-            <p className="mt-1 text-lg text-blue-400">{experience.company}</p>
+            <p className="mt-1 text-lg font-medium text-blue-600 dark:text-blue-400">{experience.company}</p>
           </div>
-          <Briefcase className="h-5 w-5 text-slate-600 transition-colors group-hover:text-blue-400" />
+          <Briefcase className="h-5 w-5 text-slate-400 transition-colors group-hover:text-blue-500 dark:text-slate-600 dark:group-hover:text-blue-400" />
         </div>
 
         {/* Meta info */}
-        <div className="mb-4 flex flex-wrap gap-4 text-sm text-slate-400">
+        <div className="mb-4 flex flex-wrap gap-4 text-sm text-slate-500 dark:text-slate-400">
           <div className="flex items-center gap-1.5">
             <Calendar className="h-4 w-4" />
             <span>{experience.period}</span>
@@ -151,9 +151,9 @@ function ExperienceCard({
           {experience.bullets.map((bullet, bulletIndex) => (
             <li
               key={bulletIndex}
-              className="flex items-start gap-2 text-slate-300"
+              className="flex items-start gap-2 text-slate-700 dark:text-slate-300"
             >
-              <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-400" />
+              <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-500 dark:bg-blue-400" />
               <span className="text-sm leading-relaxed">{bullet}</span>
             </li>
           ))}
@@ -185,14 +185,14 @@ export function ExperienceSection() {
   }, []);
 
   return (
-    <section ref={ref} className="py-16 md:py-24" id="experience">
+    <section ref={ref} className="scroll-mt-24 border-t border-slate-200/80 py-16 transition-colors duration-300 dark:border-slate-800/80 md:py-24" id="experience">
       {/* Section Header */}
       <div
         className={`mb-12 transform transition-all duration-700 ${
           isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
         }`}
       >
-        <h2 className="text-3xl font-bold text-slate-50 md:text-4xl">
+        <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50 sm:text-3xl md:text-4xl">
           Professional Experience
         </h2>
       </div>
@@ -206,14 +206,14 @@ export function ExperienceSection() {
         {experienceStats.map((stat, index) => (
           <div
             key={index}
-            className="rounded-2xl border border-slate-800 bg-slate-900/50 p-6 text-center backdrop-blur-sm transition-all duration-300 hover:border-blue-500/50 hover:bg-slate-900/80"
+            className="rounded-2xl border border-slate-200/80 bg-white/70 p-6 text-center shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-blue-500/50 hover:shadow-md dark:border-slate-800 dark:bg-slate-900/50 dark:hover:border-blue-400/50 dark:hover:bg-slate-900/80"
           >
-            <AnimatedCounter 
-              value={stat.value} 
-              suffix={stat.suffix} 
-              duration={2000 + index * 200} 
+            <AnimatedCounter
+              value={stat.value}
+              suffix={stat.suffix}
+              duration={2000 + index * 200}
             />
-            <p className="mt-2 text-sm text-slate-400">{stat.label}</p>
+            <p className="mt-2 text-sm text-slate-600 dark:text-slate-400">{stat.label}</p>
           </div>
         ))}
       </div>
@@ -230,7 +230,6 @@ export function ExperienceSection() {
               key={index}
               experience={experience}
               index={index}
-            //   isLatest={index === 0}
             />
           ))}
         </div>

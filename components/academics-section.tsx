@@ -17,9 +17,9 @@ import { organizations, globalPrograms, awards, certifications } from "@/data/re
 const education = {
   degree: "Bachelor of Science in Mathematics (Computer Science)",
   institution: "Institut Teknologi Sepuluh Nopember",
-  period: "2022 - Present",
+  period: "2022 - 2026",
   location: "Surabaya, Indonesia",
-  description: "Core curriculum focused on mathematics, data science, machine learning, and software development methodologies.",
+  description: "Core curriculum focused on applied mathematics, computer science fundamentals, data science, machine learning architectures, and statistical computing.",
 };
 
 function AnimatedCard({
@@ -54,8 +54,9 @@ function AnimatedCard({
   return (
     <div
       ref={ref}
-      className={`transform transition-all duration-700 ease-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-        } ${className}`}
+      className={`transform transition-all duration-700 ease-out ${
+        isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+      } ${className}`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       {children}
@@ -72,22 +73,22 @@ function OrganizationCard({
 }) {
   return (
     <AnimatedCard index={index}>
-      <div className="group h-full rounded-2xl border border-slate-800 bg-slate-900/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-blue-500/50 hover:bg-slate-900/80">
+      <div className="group h-full rounded-2xl border border-slate-200/80 bg-white/70 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-blue-500/50 hover:shadow-lg dark:border-slate-800/80 dark:bg-slate-900/50 dark:hover:border-blue-400/50 dark:hover:bg-slate-900/80">
         <div className="mb-4 flex items-start justify-between">
           <div>
-            <h4 className="text-lg font-semibold text-slate-50">{organization.role}</h4>
-            <p className="text-blue-400">{organization.name}</p>
+            <h4 className="text-lg font-semibold text-slate-900 dark:text-slate-50">{organization.role}</h4>
+            <p className="text-blue-600 dark:text-blue-400 font-medium">{organization.name}</p>
           </div>
-          <Users className="h-5 w-5 text-slate-600 transition-colors group-hover:text-blue-400" />
+          <Users className="h-5 w-5 text-slate-400 transition-colors group-hover:text-blue-500 dark:text-slate-600 dark:group-hover:text-blue-400" />
         </div>
-        <div className="mb-4 flex items-center gap-1.5 text-sm text-slate-400">
+        <div className="mb-4 flex items-center gap-1.5 text-sm text-slate-500 dark:text-slate-400">
           <Calendar className="h-4 w-4" />
           <span>{organization.period}</span>
         </div>
         <ul className="space-y-2">
           {organization.bullets.map((bullet, bulletIndex) => (
-            <li key={bulletIndex} className="flex items-start gap-2 text-slate-300">
-              <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-400" />
+            <li key={bulletIndex} className="flex items-start gap-2 text-slate-700 dark:text-slate-300">
+              <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-500 dark:bg-blue-400" />
               <span className="text-sm leading-relaxed">{bullet}</span>
             </li>
           ))}
@@ -106,15 +107,15 @@ function GlobalProgramCard({
 }) {
   return (
     <AnimatedCard index={index}>
-      <div className="group h-full rounded-2xl border border-slate-800 bg-slate-900/50 p-6 backdrop-blur-sm transition-all duration-300 hover:border-green-500/50 hover:bg-slate-900/80">
+      <div className="group h-full rounded-2xl border border-slate-200/80 bg-white/70 p-6 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-emerald-500/50 hover:shadow-lg dark:border-slate-800/80 dark:bg-slate-900/50 dark:hover:border-emerald-400/50 dark:hover:bg-slate-900/80">
         <div className="mb-4 flex items-start justify-between">
           <div>
-            <h4 className="text-lg font-semibold text-slate-50">{program.title}</h4>
-            <p className="text-green-400">{program.role}</p>
+            <h4 className="text-lg font-semibold text-slate-900 dark:text-slate-50">{program.title}</h4>
+            <p className="text-emerald-600 dark:text-emerald-400 font-medium">{program.role}</p>
           </div>
-          <Globe className="h-5 w-5 text-slate-600 transition-colors group-hover:text-green-400" />
+          <Globe className="h-5 w-5 text-slate-400 transition-colors group-hover:text-emerald-500 dark:text-slate-600 dark:group-hover:text-emerald-400" />
         </div>
-        <div className="mb-4 flex flex-wrap gap-4 text-sm text-slate-400">
+        <div className="mb-4 flex flex-wrap gap-4 text-sm text-slate-500 dark:text-slate-400">
           <div className="flex items-center gap-1.5">
             <Calendar className="h-4 w-4" />
             <span>{program.period}</span>
@@ -126,8 +127,8 @@ function GlobalProgramCard({
         </div>
         <ul className="space-y-2">
           {program.highlights.map((highlight, highlightIndex) => (
-            <li key={highlightIndex} className="flex items-start gap-2 text-slate-300">
-              <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-green-400" />
+            <li key={highlightIndex} className="flex items-start gap-2 text-slate-700 dark:text-slate-300">
+              <span className="mt-2 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-emerald-500 dark:bg-emerald-400" />
               <span className="text-sm leading-relaxed">{highlight}</span>
             </li>
           ))}
@@ -161,13 +162,14 @@ function AwardBadge({ award, index }: { award: string; index: number }) {
   return (
     <div
       ref={ref}
-      className={`transform transition-all duration-500 ease-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
-        }`}
+      className={`transform transition-all duration-500 ease-out ${
+        isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
+      }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
-      <div className="group flex items-start gap-3 rounded-xl border border-slate-800 bg-slate-900/50 p-4 backdrop-blur-sm transition-all duration-300 hover:border-yellow-500/50 hover:bg-slate-900/80">
-        <Trophy className="mt-0.5 h-5 w-5 flex-shrink-0 text-yellow-500" />
-        <span className="text-sm text-slate-300">{award}</span>
+      <div className="group flex items-start gap-3 rounded-xl border border-slate-200/80 bg-white/70 p-4 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-amber-500/50 hover:shadow-md dark:border-slate-800/80 dark:bg-slate-900/50 dark:hover:border-yellow-500/50 dark:hover:bg-slate-900/80">
+        <Trophy className="mt-0.5 h-5 w-5 flex-shrink-0 text-amber-500 dark:text-yellow-500" />
+        <span className="text-sm text-slate-800 dark:text-slate-300">{award}</span>
       </div>
     </div>
   );
@@ -203,19 +205,19 @@ function CertificationCard({
   const hasUrl = certification.url && certification.url.trim() !== "";
 
   const cardContent = (
-    <div className={`group flex items-start gap-4 rounded-xl border border-slate-800 bg-slate-900/50 p-5 backdrop-blur-sm transition-all duration-300 hover:border-purple-500/50 hover:bg-slate-900/80 ${hasUrl ? "cursor-pointer" : ""}`}>
-      <div className="rounded-lg bg-purple-500/20 p-2">
-        <BadgeCheck className="h-5 w-5 text-purple-400" />
+    <div className={`group flex items-start gap-4 rounded-xl border border-slate-200/80 bg-white/70 p-5 shadow-sm backdrop-blur-sm transition-all duration-300 hover:border-purple-500/50 hover:shadow-md dark:border-slate-800/80 dark:bg-slate-900/50 dark:hover:border-purple-500/50 dark:hover:bg-slate-900/80 ${hasUrl ? "cursor-pointer" : ""}`}>
+      <div className="rounded-lg bg-purple-500/15 p-2 dark:bg-purple-500/20">
+        <BadgeCheck className="h-5 w-5 text-purple-600 dark:text-purple-400" />
       </div>
       <div className="flex-1">
         <div className="flex items-start justify-between">
-          <h4 className="font-semibold text-slate-50">{certification.name}</h4>
+          <h4 className="font-semibold text-slate-900 dark:text-slate-50">{certification.name}</h4>
           {hasUrl && (
-            <ExternalLink className="h-4 w-4 text-slate-500 transition-colors group-hover:text-purple-400" />
+            <ExternalLink className="h-4 w-4 text-slate-400 transition-colors group-hover:text-purple-600 dark:text-slate-500 dark:group-hover:text-purple-400" />
           )}
         </div>
-        <p className="text-sm text-purple-400">{certification.issuer}</p>
-        <div className="mt-2 flex items-center gap-1.5 text-xs text-slate-400">
+        <p className="text-sm font-medium text-purple-600 dark:text-purple-400">{certification.issuer}</p>
+        <div className="mt-2 flex items-center gap-1.5 text-xs text-slate-500 dark:text-slate-400">
           <Calendar className="h-3 w-3" />
           <span>{certification.period}</span>
         </div>
@@ -226,8 +228,9 @@ function CertificationCard({
   return (
     <div
       ref={ref}
-      className={`transform transition-all duration-500 ease-out ${isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
-        }`}
+      className={`transform transition-all duration-500 ease-out ${
+        isVisible ? "translate-y-0 opacity-100" : "translate-y-5 opacity-0"
+      }`}
       style={{ transitionDelay: `${index * 100}ms` }}
     >
       {hasUrl ? (
@@ -263,34 +266,36 @@ export function AcademicsSection() {
   }, []);
 
   return (
-    <section ref={ref} className="py-16 md:py-24" id="education">
+    <section ref={ref} className="scroll-mt-24 border-t border-slate-200/80 py-16 transition-colors duration-300 dark:border-slate-800/80 md:py-24" id="education">
       {/* Section Header */}
       <div
-        className={`mb-12 transform transition-all duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+        className={`mb-12 transform transition-all duration-700 ${
+          isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+        }`}
       >
-        <h2 className="text-3xl font-bold text-slate-50 md:text-4xl">Education</h2>
-        <p className="mt-2 text-slate-400">Academic Background</p>
+        <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-slate-50 sm:text-3xl md:text-4xl">Education</h2>
+        <p className="mt-2 text-sm text-slate-600 dark:text-slate-400 md:text-base">Academic Background & Extracurricular Leadership</p>
       </div>
 
       {/* Main Education Card */}
       <div
-        className={`mb-16 transform transition-all delay-200 duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-          }`}
+        className={`mb-16 transform transition-all delay-200 duration-700 ${
+          isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+        }`}
       >
-        <div className="rounded-2xl border border-slate-800 bg-slate-900/50 p-8 backdrop-blur-sm">
+        <div className="rounded-2xl border border-slate-200/80 bg-white/70 p-8 shadow-sm backdrop-blur-sm dark:border-slate-800/80 dark:bg-slate-900/50">
           <div className="flex flex-col gap-6 md:flex-row md:items-start md:justify-between">
             <div className="flex-1">
               <div className="mb-4 flex items-center gap-3">
-                <div className="rounded-xl bg-blue-500/20 p-3">
-                  <GraduationCap className="h-6 w-6 text-blue-400" />
+                <div className="rounded-xl bg-blue-500/15 p-3 dark:bg-blue-500/20">
+                  <GraduationCap className="h-6 w-6 text-blue-600 dark:text-blue-400" />
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold text-slate-50">{education.degree}</h3>
-                  <p className="text-blue-400">{education.institution}</p>
+                  <h3 className="text-xl font-semibold text-slate-900 dark:text-slate-50">{education.degree}</h3>
+                  <p className="text-blue-600 dark:text-blue-400 font-medium">{education.institution}</p>
                 </div>
               </div>
-              <div className="mb-4 flex flex-wrap gap-4 text-sm text-slate-400">
+              <div className="mb-4 flex flex-wrap gap-4 text-sm text-slate-500 dark:text-slate-400">
                 <div className="flex items-center gap-1.5">
                   <Calendar className="h-4 w-4" />
                   <span>{education.period}</span>
@@ -300,7 +305,7 @@ export function AcademicsSection() {
                   <span>{education.location}</span>
                 </div>
               </div>
-              <p className="text-slate-300">{education.description}</p>
+              <p className="text-slate-700 dark:text-slate-300 leading-relaxed text-sm md:text-base">{education.description}</p>
             </div>
           </div>
         </div>
@@ -309,13 +314,14 @@ export function AcademicsSection() {
       {/* Organizations Section */}
       <div className="mb-16">
         <div
-          className={`mb-8 flex items-center gap-3 transform transition-all delay-300 duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-            }`}
+          className={`mb-8 flex items-center gap-3 transform transition-all delay-300 duration-700 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
         >
-          <div className="rounded-lg bg-blue-500/20 p-2">
-            <Users className="h-5 w-5 text-blue-400" />
+          <div className="rounded-lg bg-blue-500/15 p-2 dark:bg-blue-500/20">
+            <Users className="h-5 w-5 text-blue-600 dark:text-blue-400" />
           </div>
-          <h3 className="text-2xl font-semibold text-slate-50">Organizations & Leadership</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-50">Organizations & Leadership</h3>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           {organizations.map((org, index) => (
@@ -327,13 +333,14 @@ export function AcademicsSection() {
       {/* Global Programs Section */}
       <div className="mb-16">
         <div
-          className={`mb-8 flex items-center gap-3 transform transition-all delay-400 duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-            }`}
+          className={`mb-8 flex items-center gap-3 transform transition-all delay-400 duration-700 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
         >
-          <div className="rounded-lg bg-green-500/20 p-2">
-            <Globe className="h-5 w-5 text-green-400" />
+          <div className="rounded-lg bg-emerald-500/15 p-2 dark:bg-emerald-500/20">
+            <Globe className="h-5 w-5 text-emerald-600 dark:text-emerald-400" />
           </div>
-          <h3 className="text-2xl font-semibold text-slate-50">Global Programs</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-50">Global Programs</h3>
         </div>
         <div className="grid gap-6 md:grid-cols-2">
           {globalPrograms.map((program, index) => (
@@ -345,13 +352,14 @@ export function AcademicsSection() {
       {/* Awards & Achievements Section */}
       <div className="mb-16">
         <div
-          className={`mb-8 flex items-center gap-3 transform transition-all delay-500 duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-            }`}
+          className={`mb-8 flex items-center gap-3 transform transition-all delay-500 duration-700 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
         >
-          <div className="rounded-lg bg-yellow-500/20 p-2">
-            <Trophy className="h-5 w-5 text-yellow-500" />
+          <div className="rounded-lg bg-amber-500/15 p-2 dark:bg-yellow-500/20">
+            <Trophy className="h-5 w-5 text-amber-500 dark:text-yellow-500" />
           </div>
-          <h3 className="text-2xl font-semibold text-slate-50">Awards & Achievements</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-50">Awards & Achievements</h3>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
           {awards.map((award, index) => (
@@ -363,13 +371,14 @@ export function AcademicsSection() {
       {/* Certifications Section */}
       <div>
         <div
-          className={`mb-8 flex items-center gap-3 transform transition-all delay-600 duration-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-            }`}
+          className={`mb-8 flex items-center gap-3 transform transition-all delay-600 duration-700 ${
+            isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
+          }`}
         >
-          <div className="rounded-lg bg-purple-500/20 p-2">
-            <BadgeCheck className="h-5 w-5 text-purple-400" />
+          <div className="rounded-lg bg-purple-500/15 p-2 dark:bg-purple-500/20">
+            <BadgeCheck className="h-5 w-5 text-purple-600 dark:text-purple-400" />
           </div>
-          <h3 className="text-2xl font-semibold text-slate-50">Certifications</h3>
+          <h3 className="text-2xl font-semibold text-slate-900 dark:text-slate-50">Certifications</h3>
         </div>
         <div className="grid gap-4 md:grid-cols-2">
           {certifications.map((cert, index) => (

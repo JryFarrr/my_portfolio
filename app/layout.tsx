@@ -3,7 +3,7 @@ import { Poppins, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { Navbar } from "@/components/navbar";
 import Footer from "@/components/footer";
-
+import { ThemeProvider } from "@/components/theme-provider";
 
 const poppins = Poppins({
   variable: "--font-poppins",
@@ -19,7 +19,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Jiryan Farokhi | Portfolio",
   description:
-    "Digital resume for Jiryan Farokhi, showcasing data science projects, academic background, and leadership experience.",
+    "Digital resume for Jiryan Farokhi, showcasing AI engineering, data science projects, academic background, and leadership experience.",
 };
 
 export default function RootLayout({
@@ -28,16 +28,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${poppins.variable} ${geistMono.variable} font-sans bg-slate-950 text-slate-100 antialiased`}
-        style={{ fontFamily: 'var(--font-poppins), sans-serif' }}
+        className={`${poppins.variable} ${geistMono.variable} font-sans bg-slate-50 text-slate-900 antialiased transition-colors duration-300 dark:bg-slate-950 dark:text-slate-100`}
+        style={{ fontFamily: "var(--font-poppins), sans-serif" }}
       >
-        <div className="min-h-screen">
-          <Navbar />
-          {children}
-          <Footer />
-        </div>
+        <ThemeProvider attribute="class" defaultTheme="dark" enableSystem>
+          <div className="min-h-screen">
+            <Navbar />
+            {children}
+            <Footer />
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
