@@ -82,6 +82,7 @@ const deployedProjects: ProjectItem[] = [
     tags: ["Supabase", "Ollama", "Graph RAG", "LangChain", "FastAPI", "NextJS"],
     github: "https://github.com/JryFarrr/docs-qanda.git",
     image: "/images/projects/docsqanda.png",
+    videoUrl: "https://youtu.be/dccRO2axlGA"
   },  
   {
     title: "Product Herbal Recommendation System",
@@ -117,7 +118,7 @@ const deployedProjects: ProjectItem[] = [
     tags: ["Whisper", "GEMINI API", "Docker", "FastAPI", "NextJS", "Sentiment Analysis", "Topic Modelling"],
     github: "https://github.com/JryFarrr/satria_data.git",
     image: "/images/projects/cgd.png",
-    videoUrl: "https://youtu.be/K1Mj2CQdVbU", // Video Demo URL
+    videoUrl: "https://youtu.be/zRa0SWblp6Y", // Video Demo URL
   },
   {
     title: "Digital Narrative Analysis with LDA and LLM for Government Health Policy Evaluation",
