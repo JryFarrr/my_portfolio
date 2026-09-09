@@ -113,13 +113,13 @@ const deployedProjects: ProjectItem[] = [
     image: "/images/projects/cgd.png",
     videoUrl: "https://youtu.be/zRa0SWblp6Y", // Video Demo URL
   },
-  {
-    title: "Digital Narrative Analysis with LDA and LLM for Government Health Policy Evaluation",
-    description: "This project offer a tool for automatically and systematically evaluating local news, YouTube news comments, and government policies.",
-    tags: ["NLP", "GEMINI API", "Sentiment Analyst", "Recommendation System", "LDA", "RAG"],
-    github: "https://github.com/JryFarrr/datmin_gemastik",
-    image: "/images/projects/gemastik.jpeg",
-  },
+  // {
+  //   title: "Digital Narrative Analysis with LDA and LLM for Government Health Policy Evaluation",
+  //   description: "This project offer a tool for automatically and systematically evaluating local news, YouTube news comments, and government policies.",
+  //   tags: ["NLP", "GEMINI API", "Sentiment Analyst", "Recommendation System", "LDA", "RAG"],
+  //   github: "https://github.com/JryFarrr/datmin_gemastik",
+  //   image: "/images/projects/gemastik.jpeg",
+  // },
   {
     title: "Intelligent Grading System",
     description: "End-to-end Automated Grading System using Machine Learning to automatically grade essay exams integrated with an exam web application.",
