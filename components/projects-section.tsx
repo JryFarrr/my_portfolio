@@ -99,13 +99,6 @@ const deployedProjects: ProjectItem[] = [
     image: "/images/projects/etl-mining.png",
   },
   {
-    title: "Graph RAG Knowledge Graph with Pubmed Data",
-    description: "Website with Pubmed Data converted to TTL format. Built Knowledge Graph based on Neo4J with node extraction and graph relation for complex document understanding.",
-    tags: ["Knowledge Graph", "Ollama", "Graph RAG", "Neo4J"],
-    github: "https://github.com/JryFarrr/graph_rag.git",
-    image: "/images/projects/graph_rag.png",
-  },
-  {
     title: "SoulMatch Website",
     description: "Full stack project using NEXT JS with Supabase integration. Features Admin and SuperAdmin services.",
     tags: ["Next JS", "Supabase", "PostgreSQL", "Full Stack Developments", "Database Management System"],
