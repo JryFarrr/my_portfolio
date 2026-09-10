@@ -167,6 +167,7 @@ export const deployedProjects: ProjectItem[] = [
     impact: "Role-based management workflow on a full-stack platform.",
     tags: ["Next JS", "Supabase", "PostgreSQL", "Full Stack Developments", "Database Management System"],
     github: "https://github.com/JryFarrr/tugas_web_ets.git",
+    liveUrl: "https://tugas-web-ets.vercel.app/",
     image: "/images/projects/soulmatch.jpg",
   },
   
@@ -177,14 +178,14 @@ export const deployedProjects: ProjectItem[] = [
   //   github: "https://github.com/JryFarrr/datmin_gemastik",
   //   image: "/images/projects/gemastik.jpeg",
   // },
-  {
-    title: "Mapleads AI - Google Maps Analytics",
-    description: "API service that collects business data from Google Maps and analyzes it with OpenAI for strengths, weaknesses, and suitability.",
-    impact: "Turns raw business listings into actionable insights.",
-    tags: ["Integrated API", "Search API", "Open AI API", "Maps API", "Swagger Documentation"],
-    github: "https://github.com/JryFarrr/boringai_project_gmaps_analytics",
-    image: "/images/projects/mapleads.jpg",
-  },
+  // {
+  //   title: "Mapleads AI - Google Maps Analytics",
+  //   description: "API service that collects business data from Google Maps and analyzes it with OpenAI for strengths, weaknesses, and suitability.",
+  //   impact: "Turns raw business listings into actionable insights.",
+  //   tags: ["Integrated API", "Search API", "Open AI API", "Maps API", "Swagger Documentation"],
+  //   github: "https://github.com/JryFarrr/boringai_project_gmaps_analytics",
+  //   image: "/images/projects/mapleads.jpg",
+  // },
 ];
 
 // Data Visualization Projects Data
