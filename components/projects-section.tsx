@@ -59,14 +59,6 @@ export const notebookProjects: ProjectItem[] = [
     image: "/images/projects/predictive_analytics.jpg",
   },
   {
-    title: "Predictive Analytics on Sustainable Energy",
-    description: "Statistical analysis and feature engineering on energy, weather, and solar datasets to model energy baseline behavior under varying conditions.",
-    impact: "Weather-aware energy baseline modeling for forecasting.",
-    tags: ["Time Series", "Scikit-learn", "Machine Learning Models", "Forecasting", "Seasonality Patterns"],
-    notebookUrl: "https://colab.research.google.com/drive/1FBj7IoJlln0Bgmgmf4RhjuRtFbjPVhsT?usp=sharing",
-    image: "/images/projects/predictive_analytics.jpg",
-  },
-  {
     title: "Commodity Price Prediction",
     description: "Predicts commodity prices across Indonesian provinces using global commodity prices, Google Trends, and currency data.",
     impact: "Forecasting commodity movements from multi-source economic signals.",
