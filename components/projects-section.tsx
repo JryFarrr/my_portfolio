@@ -154,6 +154,15 @@ export const deployedProjects: ProjectItem[] = [
     image: "/images/projects/herbal-recommendations.jpeg",
   },
   {
+    title: "GoClean",
+    description: "Designed a smart waste pickup platform that connects citizens, TPS operators, and admins.",
+    impact: "Delivered an integrated waste management system that supports digital pickup requests, GPS-based location selection, TPS matching, transaction tracking, and admin monitoring.",
+    tags: ["SQL Server", "NextJS", "GIS", "Database Management Systems", "NextJS", "Buffer Search", "Haversine Formula", "Full Stack Development"],
+    github: "https://github.com/JryFarrr/GoClean.git",
+    image: "/images/projects/goclean.png",
+    liveUrl: "https://goclean-seven.vercel.app/", // Video Demo URL
+  },
+  {
     title: "IDX Stock Warehouse",
     description: "Daily ETL pipeline tracking Indonesia's top 5 stocks and visualizing their gains, losses, and rupiah correlation.",
     impact: "Automated daily stock tracking and analysis.",
