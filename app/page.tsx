@@ -24,11 +24,11 @@ export default function Home() {
           </div>
 
           {/* Text Content */}
-          <div className="flex flex-col items-center space-y-5 text-center lg:order-1 lg:flex-1 lg:items-start lg:text-left">
+          <div className="flex flex-col space-y-5 lg:order-1 lg:flex-1">
             <HeroContent summary={summary} />
 
             {/* CTA and Social Links */}
-            <div className="flex justify-center pt-2 lg:justify-start">
+            <div className="flex pt-2 lg:justify-start">
               <HeroButtons />
             </div>
           </div>

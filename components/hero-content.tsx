@@ -7,17 +7,17 @@ const roles = ["AI Engineer", "Data Scientist", "Data Analyst"];
 export function HeroContent({ summary }: { summary: string }) {
   return (
     <>
-      <p className="text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">
+      <p className="text-left text-sm font-semibold uppercase tracking-widest text-slate-500 dark:text-slate-400">
         <TypingRole roles={roles} typingSpeed={80} deletingSpeed={40} pauseDuration={2500} />
       </p>
-      <h1 className="text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
+      <h1 className="text-left text-3xl font-bold leading-tight tracking-tight sm:text-4xl md:text-5xl lg:text-6xl">
         <span className="text-slate-900 dark:text-slate-100">Hello I&apos;m</span>
         <br />
         <span className="text-blue-600 dark:text-blue-400">
           <TypingName name="Jiryan Farokhi" />
         </span>
       </h1>
-      <p className="max-w-sm text-sm leading-relaxed text-slate-600 dark:text-slate-400 sm:max-w-md md:text-base lg:max-w-xl">
+      <p className="max-w-sm text-left text-sm leading-relaxed text-slate-600 dark:text-slate-400 sm:max-w-md md:text-base lg:max-w-xl">
         {summary}
       </p>
     </>
