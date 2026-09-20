@@ -172,16 +172,7 @@ export const experiences = [
                 "Built two framework Data Science Agents for forecasting and anomaly detection with adaptation from SOTA research, enhancing the performance and accuracy by 95% and token reduction by 80%.",
                 "Built GL Vision for spoof detection in facial recognition with more than 10 cases, reducing failures of APCER and BPCER by 96%."
     ],
-  },
-  {
-    company: "Avalon AI",
-    role: "Data Scientist Lead",
-    location: "Surabaya, Indonesia",
-    period: "February 2024 - November 2025",
-    bullets: ["Developed a stateless HTTP backend service for Maps Lead AI, commissioned by Boring AI, to generate business leads based on criteria like business type, location, and reviews.",
-              "Built five HTTP POST endpoints, integrated with the Workflow Executor and utilized Google Maps, SearchAPI.io, and OpenAI APIs for search, scraping, and review analysis, ensuring precise lead scoring.",
-              "Leading a team of startups to delegate in data science competitions and successfully winning more than 10 championships at the national level.",
-    ],
+    presentationLink: "https://canva.link/mmj7n3j8zr7lzjo",
   },
   {
     company: "PT Divusi",
@@ -191,6 +182,17 @@ export const experiences = [
     bullets: ["Analyzed supply and demand datasets across 34 provinces and 514 cities/regencies in Indonesia, sourced from BUMN company and international enterprises.",
               "Developed and A/B tested tree-based forecasting models (Random Forest, XGBoost) for 12-month supply-demand prediction, reducing RMSE by 89%.",
               "Designed interactive dashboards with Streamlit to visualize correlation analysis and delivered strategic recommendations to stakeholders.",
+    ],
+    presentationLink: "https://canva.link/iz29szarl1s722q",
+  },
+  {
+    company: "Avalon AI",
+    role: "Data Scientist Lead",
+    location: "Surabaya, Indonesia",
+    period: "February 2024 - November 2025",
+    bullets: ["Developed a stateless HTTP backend service for Maps Lead AI, commissioned by Boring AI, to generate business leads based on criteria like business type, location, and reviews.",
+              "Built five HTTP POST endpoints, integrated with the Workflow Executor and utilized Google Maps, SearchAPI.io, and OpenAI APIs for search, scraping, and review analysis, ensuring precise lead scoring.",
+              "Leading a team of startups to delegate in data science competitions and successfully winning more than 10 championships at the national level.",
     ],
   },
   // {

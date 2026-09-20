@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState, useRef } from "react";
-import { Calendar, MapPin, Briefcase } from "lucide-react";
+import { Calendar, MapPin, Briefcase, Presentation } from "lucide-react";
 import { experiences } from "@/data/resume";
 
 // Stats data for experience section
@@ -158,6 +158,21 @@ function ExperienceCard({
             </li>
           ))}
         </ul>
+
+        {/* Presentation Link */}
+        {"presentationLink" in experience && experience.presentationLink && (
+          <div className="mt-4">
+            <a
+              href={experience.presentationLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-lg bg-blue-500/10 px-4 py-2 text-sm font-medium text-blue-600 transition-all hover:bg-blue-500/20 dark:bg-blue-500/20 dark:text-blue-400 dark:hover:bg-blue-500/30"
+            >
+              <Presentation className="h-4 w-4" />
+              View Presentation
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );
